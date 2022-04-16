@@ -1,0 +1,129 @@
+// SIDEBAR PROPERTIES
+$sidebar_w : 150px
+
+//LAYOUT BREAKPOINTS
+$breakpoint_mobile: 320px
+$breakpoint_tablet: 481px
+$breakpoint_laptop: 769px
+$breakpoint_desktop: 1025px
+$breakpoint_tv: 1201px
+
+//COLORS
+$main-color: #3DB13D
+$unactive-textcolor: #848484
+    
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+body, html
+    width: 100%
+    height: 100%
+    font-family: 'Poppins'
+    font-size: 15px
+a
+    text-decoration: none
+input, textarea, select
+    line-height: 1.8
+    font-size: 15px
+    &::selection
+        color: white
+        background-color: $main-color
+ul
+    list-style: none
+    margin: 0
+    padding: 0
+
+header
+    width: 100%
+    height: 90px
+    position: fixed
+    top: 0
+    left: 0
+    border-bottom: 1px solid #e8e8e8
+    @media screen and ( min-width: $breakpoint_laptop)
+        width: calc( 100% - 150px )
+        left: 150px
+
+#sidebar
+    width: $sidebar_w
+    height: 100%
+    box-shadow: 0 0 12px RGB(0 0 0 / 8%)
+    display: none
+    transition: 0.3s
+    @media screen and ( min-width: $breakpoint_laptop)
+        display: block
+    nav
+        a 
+            width: 100%
+            height: 90px
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            border-bottom: 1px solid #e8e8e8
+        ul
+            width: 100%
+            li
+                width: 100%
+                height: 90px
+                &.current
+                    a
+                        color: $main-color
+                        background-color: #f9f9f9
+                a 
+                    width: 100%
+                    color: $unactive-textcolor
+                    span
+                        display: block
+                        margin: 0.5em
+
+.mobileLogo
+    display: flex
+    align-items: center
+    color: $unactive-textcolor
+    @media screen and ( min-width: $breakpoint_laptop)
+        display: none
+.searchbarWrapper
+    color: $unactive-textcolor
+    display: none
+    @media screen and ( min-width: $breakpoint_laptop)
+        display: flex
+    input
+        width: 250px
+        border: transparent
+        outline: none
+        color: $unactive-textcolor
+.actionWrapper
+    color: $unactive-textcolor
+    display: none
+    @media screen and ( min-width: $breakpoint_laptop)
+        display: flex
+    a
+        color: $unactive-textcolor
+.userWrapper
+    img
+        max-height: 32px
+
+.menuBtn
+    display: flex
+    align-items: center
+    color: $unactive-textcolor
+    @media screen and ( min-width: $breakpoint_laptop)
+        display: none
+
+.text-main
+    color: $main-color
+.text-unactive
+    color: $unactive-textcolor
+.text-black
+    color: #00000080
+.disabled
+    background-color: #d5d5d5
+    
+        
+
+      
+    
+  
