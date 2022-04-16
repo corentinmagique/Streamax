@@ -37,6 +37,11 @@ ul {
   padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
 header {
   width: 100%;
   height: 90px;
@@ -183,6 +188,74 @@ header {
   .menuBtn {
     display: none;
   }
+}
+
+main {
+  position: fixed;
+  top: 90px;
+  left: 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+  main {
+    top: 90px;
+    left: 150px;
+    width: calc( 100% - 150px);
+    height: calc( 100% - 90px);
+    overflow-y: scroll;
+  }
+}
+
+.categoryWrapper {
+  width: 100%;
+  border-bottom: 1px solid #e8e8e8;
+  margin: 0;
+}
+
+.category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.category div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5em;
+  margin: 1em;
+  border-radius: 5px;
+}
+
+.category.current div {
+  border: 2px solid #3DB13D;
+  background-color: #f9f9f9;
+}
+
+.category img {
+  display: block;
+  max-height: 48px;
+  margin: 0.25em;
+}
+
+.category span {
+  font-size: 13px;
+  color: #848484;
 }
 
 .text-main {
