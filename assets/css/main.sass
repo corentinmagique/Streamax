@@ -260,52 +260,56 @@ main
                     letter-spacing: 0.03em;
                     margin-bottom: 10px;
                 span
-    .rightPart
-        .banner
-            position: relative
-            width: 100%
-            .mask
-                width: 100%
-                height: 500px
-                z-index: 500
-                position: absolute
-                background-color: rgba(0, 0, 0, 0.5)
-            img
-                width: 100%
-                height: 500px
-            .playBtn
-                position: absolute
-                top: calc( 50% - 50px )
-                left: calc( 50% - 50px )
-                width: 100px
-                height: 100px
-                border-radius: 50%
-                z-index: 510
-                border: 2px solid white
-                .material-icons
-                    font-size: 96px
-        .rating
-            border-bottom: 1px solid #e4e4e4;
-            margin-bottom: 45px;
-            // padding: 35px 0px 25px 0px;
-            height: 90px
+
+.banner
+    position: relative
+    width: 100%
+    .mask
+        width: 100%
+        height: 500px
+        z-index: 500
+        position: absolute
+        background-color: rgba(0, 0, 0, 0.5)
+    img
+        width: 100%
+        height: 500px
+    .playBtn
+        position: absolute
+        top: calc( 50% - 50px )
+        left: calc( 50% - 50px )
+        width: 100px
+        height: 100px
+        border-radius: 50%
+        z-index: 510
+        border: 2px solid white
+        .material-icons
+            font-size: 96px
+
+.rightPart
+    
+    .rating
+        border-bottom: 1px solid #e4e4e4;
+        margin-bottom: 45px;
+        padding: 35px 0px 25px 0px;
+        height: 90px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        .global
+            display: flex
+            flex-direction: column
+            justify-content: center
+        .user
             display: flex
             flex-direction: row
-            justify-content: space-between
-            .global
-                display: flex
-                flex-direction: column
-                justify-content: center
-            .user
-                display: flex
-                flex-direction: row
-                align-items: center
-        .desc
-            padding: 20px 25px
-            span
-                margin: 10px
-        .similar
-            padding: 20px 25px
+            align-items: center
+    .desc
+        padding: 20px 25px
+        span
+            margin: 10px
+    .similar
+        padding: 20px 25px
+
 .myPlsWrapper, .PlWrapper
     padding: 10px
     background-color: #F9F9F9
@@ -319,8 +323,11 @@ main
             font-size: 12px
 
 .PlWrapper
-    // background: #f9f9f9
-    overflow-x: scroll
+    border-radius: 0.25rem
+    .card
+        background-color: white
+        border-color: transparent
+        overflow-y: scroll
     .generalInfos
         display: flex
         justify-content: start
@@ -328,18 +335,33 @@ main
             margin: 2em
     .rating
         display: flex
+    .PlTitle
+        font-weight: 600
 .vod
+    position: relative
     display: flex
-    justify-content: space-between
+    justify-content: start
     align-items: center
     padding: 0.5em
     border-radius: 5px
     .title
         font-weight: 500
+        margin-left: 2em
         overflow: hidden
         white-space: nowrap
         text-overflow: ellipsis
-        
+    .menu
+        position: absolute
+        margin: 0.5em
+        padding: 10px
+        background-color: white
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        border-radius: 5px
+        font-size: 12px
+        top: 70%
+        right: 0
+        width: 50%
+        z-index: 10
     a
         color: #555555
     &.current

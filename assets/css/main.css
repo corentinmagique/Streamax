@@ -412,12 +412,12 @@ main {
   margin-bottom: 10px;
 }
 
-.detailWrapper .rightPart .banner {
+.banner {
   position: relative;
   width: 100%;
 }
 
-.detailWrapper .rightPart .banner .mask {
+.banner .mask {
   width: 100%;
   height: 500px;
   z-index: 500;
@@ -425,12 +425,12 @@ main {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.detailWrapper .rightPart .banner img {
+.banner img {
   width: 100%;
   height: 500px;
 }
 
-.detailWrapper .rightPart .banner .playBtn {
+.banner .playBtn {
   position: absolute;
   top: calc( 50% - 50px);
   left: calc( 50% - 50px);
@@ -441,13 +441,14 @@ main {
   border: 2px solid white;
 }
 
-.detailWrapper .rightPart .banner .playBtn .material-icons {
+.banner .playBtn .material-icons {
   font-size: 96px;
 }
 
-.detailWrapper .rightPart .rating {
+.rightPart .rating {
   border-bottom: 1px solid #e4e4e4;
   margin-bottom: 45px;
+  padding: 35px 0px 25px 0px;
   height: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -461,7 +462,7 @@ main {
           justify-content: space-between;
 }
 
-.detailWrapper .rightPart .rating .global {
+.rightPart .rating .global {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -474,7 +475,7 @@ main {
           justify-content: center;
 }
 
-.detailWrapper .rightPart .rating .user {
+.rightPart .rating .user {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -487,15 +488,15 @@ main {
           align-items: center;
 }
 
-.detailWrapper .rightPart .desc {
+.rightPart .desc {
   padding: 20px 25px;
 }
 
-.detailWrapper .rightPart .desc span {
+.rightPart .desc span {
   margin: 10px;
 }
 
-.detailWrapper .rightPart .similar {
+.rightPart .similar {
   padding: 20px 25px;
 }
 
@@ -515,7 +516,13 @@ main {
 }
 
 .PlWrapper {
-  overflow-x: scroll;
+  border-radius: 0.25rem;
+}
+
+.PlWrapper .card {
+  background-color: white;
+  border-color: transparent;
+  overflow-y: scroll;
 }
 
 .PlWrapper .generalInfos {
@@ -537,13 +544,18 @@ main {
   display: flex;
 }
 
+.PlWrapper .PlTitle {
+  font-weight: 600;
+}
+
 .vod {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -553,9 +565,25 @@ main {
 
 .vod .title {
   font-weight: 500;
+  margin-left: 2em;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.vod .menu {
+  position: absolute;
+  margin: 0.5em;
+  padding: 10px;
+  background-color: white;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
+  font-size: 12px;
+  top: 70%;
+  right: 0;
+  width: 50%;
+  z-index: 10;
 }
 
 .vod a {
