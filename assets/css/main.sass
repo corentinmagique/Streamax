@@ -55,7 +55,8 @@ header
     @media screen and ( min-width: $breakpoint_laptop)
         width: calc( 100% - 150px )
         left: 150px
-
+.row
+    --bs-gutter-x: 0
 #sidebar
     width: $sidebar_w
     height: 100%
@@ -82,6 +83,7 @@ header
                     a
                         color: $main-color
                         background-color: #f9f9f9
+                        font-weight: 500
                 a 
                     width: 100%
                     color: $unactive-textcolor
@@ -137,12 +139,23 @@ main
         height: calc( 100% - 90px )
         
 
-.categoryWrapper 
+.categoryWrapper, .actWrapper
     // position: fixed
     width: 100%
     
     border-bottom: 1px solid #e8e8e8
     margin: 0
+
+.tamerBtn
+    background-color: $main-color
+    color: white
+    font-size: 12px
+    font-weight: 500
+    width: fit-content
+    padding: 10px
+    height: 45px
+    border: none
+    border-radius: 10px
 
 .catalogWrapper
     padding: 10px 50px
@@ -293,6 +306,47 @@ main
                 margin: 10px
         .similar
             padding: 20px 25px
+.myPlsWrapper, .PlWrapper
+    padding: 10px
+    background-color: #F9F9F9
+    height: 100%
+
+.myPlsWrapper
+    .card
+        background-color: white
+        border-color: transparent
+        .creator
+            font-size: 12px
+
+.PlWrapper
+    // background: #f9f9f9
+    overflow-x: scroll
+    .generalInfos
+        display: flex
+        justify-content: start
+        div
+            margin: 2em
+    .rating
+        display: flex
+.vod
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0.5em
+    border-radius: 5px
+    .title
+        font-weight: 500
+        overflow: hidden
+        white-space: nowrap
+        text-overflow: ellipsis
+        
+    a
+        color: #555555
+    &.current
+        background-color: #f7f7f7
+        a, .title
+            color: $main-color
+    
 
 .categoryPill
     line-height: 1;
