@@ -16,6 +16,14 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: #3DB13D;
+}
+
+a:active {
+  color: #3DB13D;
+}
+
 input, textarea, select {
   line-height: 1.8;
   font-size: 15px;
@@ -45,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 header {
   width: 100%;
   height: 90px;
-  z-index: 100;
+  z-index: 1000;
   position: fixed;
   top: 0;
   left: 0;
@@ -311,6 +319,176 @@ main {
   width: calc(100% - 50px);
   color: #333333;
   font-family: 'Montserrat', sans-serif;
+}
+
+.detailWrapper {
+  --bs-gutter-x: 0;
+  height: 100%;
+}
+
+.detailWrapper .leftPart {
+  background-color: #fafafa;
+  -webkit-box-shadow: 0 0 12px RGB(0 0 0/8%);
+          box-shadow: 0 0 12px RGB(0 0 0/8%);
+}
+
+.detailWrapper .leftPart .movDisp {
+  position: relative;
+}
+
+.detailWrapper .leftPart .movDisp .moreWrapper {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
+.detailWrapper .leftPart .movDisp .moreBtn {
+  position: absolute;
+  margin: 1em;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border: 2px solid white;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.detailWrapper .leftPart .movDisp .moreMenu {
+  margin: 0.5em;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  font-size: 12px;
+  width: 50%;
+}
+
+.detailWrapper .leftPart .movDisp .moreMenu li {
+  margin: 0.25em;
+}
+
+.detailWrapper .leftPart .generalInfos {
+  padding: 35px;
+}
+
+.detailWrapper .leftPart .generalInfos .title {
+  margin-bottom: 42px;
+}
+
+.detailWrapper .leftPart .generalInfos .title h5 {
+  margin-bottom: 20px;
+}
+
+.detailWrapper .leftPart .generalInfos .date, .detailWrapper .leftPart .generalInfos .creator {
+  margin-bottom: 42px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.detailWrapper .leftPart .generalInfos .date .title, .detailWrapper .leftPart .generalInfos .creator .title {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+
+.detailWrapper .rightPart .banner {
+  position: relative;
+  width: 100%;
+}
+
+.detailWrapper .rightPart .banner .mask {
+  width: 100%;
+  height: 500px;
+  z-index: 500;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.detailWrapper .rightPart .banner img {
+  width: 100%;
+  height: 500px;
+}
+
+.detailWrapper .rightPart .banner .playBtn {
+  position: absolute;
+  top: calc( 50% - 50px);
+  left: calc( 50% - 50px);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  z-index: 510;
+  border: 2px solid white;
+}
+
+.detailWrapper .rightPart .banner .playBtn .material-icons {
+  font-size: 96px;
+}
+
+.detailWrapper .rightPart .rating {
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 45px;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.detailWrapper .rightPart .rating .global {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.detailWrapper .rightPart .rating .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.detailWrapper .rightPart .desc {
+  padding: 20px 25px;
+}
+
+.detailWrapper .rightPart .desc span {
+  margin: 10px;
+}
+
+.detailWrapper .rightPart .similar {
+  padding: 20px 25px;
+}
+
+.categoryPill {
+  line-height: 1;
+  margin: 0px 7px 5px 0px;
+  padding: 7px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  border: 2px solid #9d9d9d;
+  color: #9d9d9d;
 }
 
 .text-main {

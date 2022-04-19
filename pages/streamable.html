@@ -1,0 +1,263 @@
+<!--
+    @author NIXIA
+    @email contact@nixia.fr
+    @create date 2022-04-15 20:23:06
+    @modify date 2022-04-15 20:23:06
+    @desc Streamax 
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Streamax - Nixia IT</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Streamax">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Nixia">
+
+        <!-- APP FAVICON -->
+        <link rel="shortcut icon" href="">
+
+        <!-- BOOTSTRAP CSS -->
+        <link href="../assets/css/lib/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+    
+        <!-- MAIN CSS -->
+        <link href="../assets/css/main.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+
+        <header class="d-flex flex-row justify-content-between align-items-center">
+            <a class="mobileLogo ms-3" href="../index.html">
+                <span class="fw-bold text-black text-center">S T R E A M A X</span>
+            </a>
+            <div class="searchbarWrapper flex-row align-items-center ms-lg-5 ms-md-3">
+                <span class="material-icons-outlined">search</span>
+                <input class="ms-lg-2 ms-md-1" type="text" placeholder="Rechercher un streamable" aria-label="search">
+            </div>
+
+            <div class="actionWrapper flex-row align-items-center me-lg-5 me-md-3">
+                <a class="notificationWrapper d-flex flex-row align-items-center me-lg-4 me-md-2">
+                    <span class="material-icons-outlined">notifications</span>
+                </a>
+
+                <div class="userWrapper d-flex flex-row align-items-center">
+                    <img class="userImg rounded-circle me-1" src="../assets/media/img/placeholder/temp_user.jpg">
+                    <span class="userName me-1">Corentin C.</span>
+                    <span class="material-icons-outlined">expand_more</span>
+                </div>
+            </div>
+
+            <a class="menuBtn me-3" href="#">
+                <span class="material-icons-outlined">menu</span>
+            </a>
+        </header>
+
+        <div id="sidebar">
+            <nav class="w-100 d-flex flex-column align-items-center">
+                <a href="../index.html">
+                    <span class="fw-bold text-black text-center">S T R E A M A X</span>
+                </a>
+                <ul>  
+
+                    <li class="current">
+                        <a href="../index.html">
+                            <span class="material-icons-outlined">movie</span>
+                            Catalogue
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./playlists.html">
+                            <span class="material-icons-outlined">video_library</span>
+                            Playlists
+                        </a>
+                    </li>
+
+                    <li class="disabled">
+                        <a href="#" aria-disabled="true">
+                            <span class="material-icons-outlined">event</span>
+                            À venir
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <main>
+            <div class="detailWrapper row">
+
+                <div class="col-lg-3 col-sm-12 leftPart">
+                    <div class="movDisp">
+                        <img src="../assets/media/img/placeholder/streamable.jpg" width="100%">
+                        <div class="moreWrapper d-flex flex-column align-items-center">
+                            <a class="moreBtn" href="#">
+                                <span class="material-icons text-white">
+                                    more_horiz
+                                </span>
+                            </a>
+                            <ul class="moreMenu d-none">
+                                <li><a href="#" class="text-main">Ajouter à la playlist</a></li>
+                                <li><a href="#" class="text-muted">Signaler</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    <div class="generalInfos">
+                        <div class="title">
+                            <h5 class="fw-bold">Titre</h5>
+                            <span class="categoryPill">Catégorie1</span>
+                        </div>
+                        
+                        <div class="date text-start">
+                            <h6 class="title">Date de sortie</h6>
+                            <span class="">2 Octobre 2022</span>
+                        </div>
+
+                        <div class="creator text-start">
+                            <h6 class="title">Créateur</h6>
+                            <span class="">M. Lorguatér</span>
+                        </div>
+
+                        <div class="review">
+                            <h5 class="fw-bold">Review</h5>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+                <div class="col-lg-9 col-sm-12 rightPart">
+                    <div class="banner">
+                        <div class="mask"></div>
+                        <img src="../assets/media/img/placeholder/temp_banner.jpg">
+                        <a href="#" class="overlay-content playBtn text-white">
+                            <span class="material-icons">
+                                play_arrow
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="rating">
+                        <div class="global">
+                            <span class="ms-3 text-secondary fw-light">Note globale</span>
+                            <div class="ms-3 text-main">
+                                <span class="material-icons-outlined">star</span>
+                                <span class="material-icons-outlined">star</span>
+                                <span class="material-icons-outlined">star</span>
+                                <span class="material-icons-outlined">star_half</span>
+                                <span class="material-icons-outlined">grade</span>
+                            </div>
+                        </div>
+                        
+                        <div class="user me-3">
+                            <span class="fw-light">Note utilisateur</span>
+                            <span class="ms-2 fw-bold" style="color:#42b740;">8.6</span>
+                        </div>
+                        
+
+                    </div>
+
+                    <div class="desc">
+                        <h5 class="fw-bold mb-3">Description</h5>
+                        <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Nunc eget magna eget mi mattis varius. Etiam et sapien ut turpis varius lacinia at ac urna. 
+                            Quisque tristique lorem orci, id rutrum nibh viverra sollicitudin. Nullam aliquam, nunc vel porta semper, massa erat posuere leo, vel commodo risus nisi porttitor augue. Ut consectetur lectus a nunc posuere, non placerat dolor mollis. Vivamus at sagittis enim, vel ultrices neque. Cras posuere dignissim leo, nec gravida nunc posuere a.
+                        </span>
+                    </div>
+
+                    <div class="similar">
+                        <h5 class="fw-bold mb-3">Streamables similaires</h5>
+                        <div class="row similarWrapper">
+                            <!-- begin::col -->
+                            <a href="./streamable.html" class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                <!-- begin::streamable card -->
+                                <div class="streamable-card">
+                                    
+                                    <img src="../assets/media/img/placeholder/streamable.jpg" alt="Streamable picture">
+                                        
+                                    <div class="streamable-desc">
+                                        <h6>
+                                            The Wild Things Are
+                                        </h6>
+                                        <span class="fw-bold" style="color:#42b740;">8.6</span>
+                                    </div>
+                                </div>
+                                <!-- begin::streamable card -->
+                            </a>
+                            <!-- end::col-->
+
+                            <!-- begin::col -->
+                            <a href="./pages/streamable.html" class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                <!-- begin::streamable card -->
+                                <div class="streamable-card">
+                                    
+                                    <img src="../assets/media/img/placeholder/streamable.jpg" alt="Streamable picture">
+                                        
+                                    <div class="streamable-desc">
+                                        <h6>
+                                            The Wild Things Are
+                                        </h6>
+                                        <span class="fw-bold" style="color:#42b740;">8.6</span>
+                                    </div>
+                                </div>
+                                <!-- begin::streamable card -->
+                            </a>
+                            <!-- end::col-->
+
+                            <!-- begin::col -->
+                            <a href="./pages/streamable.html" class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                <!-- begin::streamable card -->
+                                <div class="streamable-card">
+                                    
+                                    <img src="../assets/media/img/placeholder/streamable.jpg" alt="Streamable picture">
+                                        
+                                    <div class="streamable-desc">
+                                        <h6>
+                                            The Wild Things Are
+                                        </h6>
+                                        <span class="fw-bold" style="color:#42b740;">8.6</span>
+                                    </div>
+                                </div>
+                                <!-- begin::streamable card -->
+                            </a>
+                            <!-- end::col-->
+
+                            <!-- begin::col -->
+                            <a href="./pages/streamable.html" class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                <!-- begin::streamable card -->
+                                <div class="streamable-card">
+                                    
+                                    <img src="../assets/media/img/placeholder/streamable.jpg" alt="Streamable picture">
+                                        
+                                    <div class="streamable-desc">
+                                        <h6>
+                                            The Wild Things Are
+                                        </h6>
+                                        <span class="fw-bold" style="color:#42b740;">8.6</span>
+                                    </div>
+                                </div>
+                                <!-- begin::streamable card -->
+                            </a>
+                            <!-- end::col-->
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </main>
+        
+        <script src="../assets/js/lib/jquery-3.6.0.min.js"></script>
+        <script src="../assets/js/lib/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/main.js"></script>
+    </body>
+</html>
