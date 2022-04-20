@@ -20,6 +20,8 @@
         <!-- APP FAVICON -->
         <link rel="shortcut icon" href="">
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
         <!-- BOOTSTRAP CSS -->
         <link href="../assets/css/lib/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
@@ -126,7 +128,7 @@
                                         <span class="creator text-muted">3 Playlist(s)</span>
                                     </div>
                                     
-                                    <a href="#"><span class="material-icons text-main ms-auto">add</span></a>
+                                    <a href="#" class="openModal" dt-modal-size="w-50" id="add-Pl"><span class="material-icons text-main ms-auto">add</span></a>
                                 </div>
                             </div>
                             <div class="card-body"> 
@@ -157,7 +159,7 @@
                         <div class="card main">
                             <div class="card-header">
                                 <h5 class="fw-bold">Playlist 1</h5>
-                                <a href="#" class="text-unactive"><span class="material-icons-outlined">delete</span></a>
+                                <a href="#" class="openModal text-unactive" dt-modal-size="w-25" id="rem-Pl"><span class="material-icons-outlined">delete</span></a>
                             </div>
 
                             <div class="card-body">
@@ -172,15 +174,6 @@
                                     </a>
                                 </div>
                       
-                                <!-- <div class="desc">
-                                    <h5 class="fw-bold mb-3">Description</h5>
-                                    <span>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                        Nunc eget magna eget mi mattis varius. Etiam et sapien ut turpis varius lacinia at ac urna. 
-                                        Quisque tristique lorem orci, id rutrum nibh viverra sollicitudin. Nullam aliquam, nunc vel porta semper, massa erat posuere leo, vel commodo risus nisi porttitor augue. Ut consectetur lectus a nunc posuere, non placerat dolor mollis. Vivamus at sagittis enim, vel ultrices neque. Cras posuere dignissim leo, nec gravida nunc posuere a.
-                                    </span>
-                                </div> -->
-
                                 <div class="desc mb-3">
                                     <h6 class="fw-bold mb-3">Description</h6>
                                     <span>
@@ -195,7 +188,7 @@
                                     <div class="row similarWrapper align-items-center">
 
                                         <!-- begin::col -->
-                                        <a href="#" class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                        <a href="#" dt-modal-size="w-75" id="add-Stbl" class="col-12 col-md-6 col-lg-4 col-xl-3 openModal">
                                             <div class="card screen">
                                                 <div class="card-body">
                                                     <img src="../assets/media/img/add.png">
@@ -208,7 +201,7 @@
                                         <!-- end::col-->
 
                                         <!-- begin::col -->
-                                        <a href="./streamable.html" class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                        <a href="#" class="col-12 col-md-6 col-lg-4 col-xl-3">
                                             <div class="card screen">
                                                 <div class="card-body">
                                                     <span class="material-icons-outlined text-unactive">image</span>
@@ -221,7 +214,7 @@
                                         <!-- end::col-->
 
                                         <!-- begin::col -->
-                                        <a href="./streamable.html" class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                        <a href="#" class="col-12 col-md-6 col-lg-4 col-xl-3">
                                             <div class="card screen">
                                                 <div class="card-body">
                                                     <span class="material-icons-outlined text-unactive">image</span>
@@ -234,7 +227,7 @@
                                         <!-- end::col-->
 
                                         <!-- begin::col -->
-                                        <a href="./streamable.html" class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                        <a href="#" class="col-12 col-md-6 col-lg-4 col-xl-3">
                                             <div class="card screen">
                                                 <div class="card-body">
                                                     <span class="material-icons-outlined text-unactive">image</span>
