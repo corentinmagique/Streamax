@@ -244,7 +244,7 @@ main {
   padding: 10px;
   height: 45px;
   border: none;
-  border-radius: 10px;
+  border-radius: 0.25rem;
 }
 
 .catalogWrapper {
@@ -669,12 +669,62 @@ main {
   color: #3DB13D;
 }
 
+.current-plan-account ul {
+  list-style: square;
+  margin: 0px 0px 30px 0px;
+  padding: 0px;
+  font-size: 13px;
+  color: #848484;
+}
+
+.current-plan-billing {
+  color: #999999;
+  font-weight: 400;
+  font-size: 13px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.btn {
+  font-weight: 400;
+  padding: 12px 20px;
+  font-size: 13px;
+  border: 1px solid #e7e7e7;
+  background: #f9f9f9;
+  color: #666666;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+sup {
+  top: -30px;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.forfait {
+  color: #3DB13D;
+  font-weight: 700;
+  font-size: 50px;
+}
+
 .settings {
   padding: 25px;
 }
 
 .guineguine-text {
   font-size: 13px;
+}
+
+.gringalet-text {
+  font-weight: 400;
 }
 
 ::-webkit-input-placeholder {
