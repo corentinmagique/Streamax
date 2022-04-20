@@ -1,0 +1,209 @@
+<!--
+    @author NIXIA
+    @email contact@nixia.fr
+    @create date 2022-04-15 20:23:06
+    @modify date 2022-04-15 20:23:06
+    @desc Streamax 
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Streamax - Nixia IT</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Streamax">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Nixia">
+
+        <!-- APP FAVICON -->
+        <link rel="shortcut icon" href="">
+
+        <!-- BOOTSTRAP CSS -->
+        <link href="../assets/css/lib/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+    
+        <!-- MAIN CSS -->
+        <link href="../assets/css/main.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+
+        <header class="d-flex flex-row justify-content-between align-items-center">
+            <a class="mobileLogo ms-3" href="../index.html">
+                <span class="fw-bold text-black text-center">S T R E A <span class="fw-bolder" style="color:#42b740;">M A X</span></span>
+            </a>
+            <div class="searchbarWrapper flex-row align-items-center ms-lg-5 ms-md-3">
+                <span class="material-icons-outlined">search</span>
+                <input class="ms-lg-2 ms-md-1" type="text" placeholder="Rechercher un streamable" aria-label="search">
+            </div>
+
+            <div class="actionWrapper flex-row align-items-center me-lg-5 me-md-3">
+                <a class="notificationWrapper d-flex flex-row align-items-center me-lg-4 me-md-2">
+                    <span class="material-icons-outlined">notifications</span>
+                </a>
+
+                <label class="dropdown">
+
+                    <div class="dd-button">
+                        <div class="userWrapper d-flex flex-row align-items-center">
+                            <img class="userImg rounded-circle me-1" src="../assets/media/img/placeholder/temp_user.jpg" alt="user picture">
+                            <span class="userName me-1">Corentin C.</span>
+                            <span class="material-icons-outlined">expand_more</span>
+                        </div>
+                    </div>
+                  
+                    <input type="checkbox" class="dd-input" id="test">
+                  
+                    <ul class="dd-menu">
+                        <li><a href="./user.html"><span class="material-icons-outlined">tune</span><span class="mt-1 ms-2">Paramètres</span></a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><span class="material-icons-outlined">logout</span><span class="mt-1 ms-2">Déconnexion</span></a></li>
+                    </ul>
+                    
+                  </label>
+            </div>
+
+            <a class="menuBtn me-3" href="#">
+                <span class="material-icons-outlined">menu</span>
+            </a>
+        </header>
+
+        <div id="sidebar">
+            <nav class="w-100 d-flex flex-column align-items-center">
+                <a href="../index.html">
+                    <span class="fw-bold text-black text-center">S T R E A <span class="fw-bolder" style="color:#42b740;">M A X</span></span>
+                </a>
+                <ul>  
+
+                    <li class="">
+                        <a href="../index.html">
+                            <span class="material-icons-outlined">movie</span>
+                            Catalogue
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./playlists.html">
+                            <span class="material-icons-outlined">video_library</span>
+                            Playlists
+                        </a>
+                    </li>
+
+                    <li class="disabled">
+                        <a href="#" aria-disabled="true">
+                            <span class="material-icons-outlined">ondemand_video</span>
+                            Direct
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <main class="settings">
+            <ul class="nav nav-tabs fs-small mt-3" id="myTab" role="tablist">
+
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="general-tab-link" data-bs-toggle="tab" data-bs-target="#general-tab" type="button" role="tab" aria-controls="general" aria-selected="true">Géneral</button>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="users-tab-link" data-bs-toggle="tab" data-bs-target="#users-tab" type="button" role="tab" aria-controls="users" aria-selected="false">Utilisateurs</button>
+                </li>
+
+            </ul>
+
+            <div class="tab-content" id="settingsTab">
+
+                <div class="tab-pane fade show active" id="general-tab" role="tabpanel" aria-labelledby="general-tab">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-12 text-center">
+                            <img src="../assets/media/img/placeholder/temp_user.jpg" height="192px" class="rounded">
+                            <button class="tamerBtn m-2">Supprimer la photo</button>
+                        </div>
+
+                        <div class="col-lg-9 col-md-12 mt-lg-0 mt-md-4 mt-sm-4 mt-4">
+                            <div class="m-2">
+                                <h6 class="fw-bold">Informations génerales</h6>
+                                <span class="text-muted guineguine-text">Ces informations nous permettent de vous fournir un support technique plus personnel.</span>
+                                <div class="row">
+                                    <div class="col-sm-4 col-12">
+                                        <div class="form-group m-2">
+                                          <label for="first-name" class="col-form-label">Prénom</label>
+                                            <input type="text" class="form-control" id="first-name" value="Jean-Aniel">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4 col-12">
+                                        <div class="form-group m-2">
+                                          <label for="first-name" class="col-form-label">Nom</label>
+                                            <input type="text" class="form-control" id="first-name" value="Caloupilet-Marabouté">
+                                        </div>
+                                   </div>
+
+                                </div>
+
+                                <hr>
+
+                                <h6 class="fw-bold mt-3">Informations du compte</h6>
+                                <span class="text-muted guineguine-text">Changer votre adresse e-mail.</span>
+                                <div class="row">
+                                    <div class="col-sm-6 col-12">
+                                        <div class="form-group m-2">
+                                          <label for="first-name" class="col-form-label">Email</label>
+                                            <input type="text" class="form-control" id="mail" value="ja-cm@gmail.com">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <h6 class="fw-bold mt-3">Mot de pase</h6>
+                                <span class="text-muted guineguine-text">Changer votre mot de passe.</span>
+                                <div class="row">
+                                    <div class="col-sm-4 col-12">
+                                        <div class="form-group m-2">
+                                          <label for="password" class="col-form-label">Mot de passe actuel</label>
+                                            <input type="password" class="form-control" id="current-password" value="············">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-12">
+                                        <div class="form-group m-2">
+                                          <label for="password" class="col-form-label">Nouveau mot de passe</label>
+                                            <input type="password" class="form-control" id="new-password" placeholder="Minimum 6 caractères">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-12">
+                                        <div class="form-group m-2">
+                                            <label for="password" class="col-form-label">&nbsp;</label>
+                                            <input type="password" class="form-control" id="new-password" placeholder="Confirmer">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <button class="tamerBtn m-2">Sauvegarder</button>
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="tab-pane fade show" id="users-tab" role="tabpanel" aria-labelledby="users-tab">
+                    
+                </div>
+            </div>
+
+        </main>
+        
+        <script src="../assets/js/lib/jquery-3.6.0.min.js"></script>
+        <script src="../assets/js/lib/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/main.js"></script>
+    </body>
+</html>

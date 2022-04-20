@@ -413,8 +413,13 @@ main
         background-color: #f7f7f7
         a, .title
             color: $main-color
-    
 
+.settings
+    padding: 25px
+.guineguine-text
+    font-size: 13px
+::placeholder
+    color: gray
 .categoryPill
     line-height: 1;
     margin: 0px 7px 5px 0px;
@@ -446,6 +451,80 @@ main
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover
     background: $unactive-textcolor;
+
+/* Dropdown */
+
+.dropdown 
+  display: inline-block
+  position: relative
+.dd-button 
+  display: inline-block
+  border-radius: 4px
+  padding: 10px 30px 10px 20px
+  background-color: #ffffff
+  cursor: pointer
+  white-space: nowrap
+.dd-input 
+  display: none
+.dd-menu 
+  position: absolute
+  top: 100%
+  border-radius: 4px
+  padding: 0
+  margin: 30px 0 0 0
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.1)
+  background-color: #ffffff
+  list-style-type: none
+.dd-input + .dd-menu 
+  display: none
+.dd-input:checked + .dd-menu
+  display: block
+.dd-menu li 
+  padding: 10px 20px
+  cursor: pointer
+  white-space: nowrap
+  a
+    font-size: 14px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.dd-menu li:hover 
+  background-color: #f6f6f6
+    
+.dd-menu li.divider
+  padding: 0
+  border-bottom: 1px solid #cccccc
+
+
+.nav-tabs 
+    border-bottom: none
+
+.nav-tabs .nav-link
+    color: #c5c5c5
+    outline: none
+    border-bottom: 3px solid
+    border-bottom-color: white
+    transition: none
+    border-top: none
+    border-left: none
+    border-right: none
+
+.tab-content
+    padding: 25px
+
+.nav-tabs .nav-link.active
+    color: #555555
+    border-bottom-color: $main-color
+.nav-tabs .nav-link:hover
+    color: #555555
+
+hr 
+    border-color: rgba(0,0,0, 0.09);
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+
+
 
 
     

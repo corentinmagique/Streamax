@@ -44,11 +44,25 @@
                     <span class="material-icons-outlined">notifications</span>
                 </a>
 
-                <div class="userWrapper d-flex flex-row align-items-center">
-                    <img class="userImg rounded-circle me-1" src="../assets/media/img/placeholder/temp_user.jpg" alt="user picture">
-                    <span class="userName me-1">Corentin C.</span>
-                    <span class="material-icons-outlined">expand_more</span>
-                </div>
+                <label class="dropdown">
+
+                    <div class="dd-button">
+                        <div class="userWrapper d-flex flex-row align-items-center">
+                            <img class="userImg rounded-circle me-1" src="../assets/media/img/placeholder/temp_user.jpg" alt="user picture">
+                            <span class="userName me-1">Corentin C.</span>
+                            <span class="material-icons-outlined">expand_more</span>
+                        </div>
+                    </div>
+                  
+                    <input type="checkbox" class="dd-input" id="test">
+                  
+                    <ul class="dd-menu">
+                        <li><a href="./pages/user.html"><span class="material-icons-outlined">tune</span><span class="mt-1 ms-2">Paramètres</span></a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><span class="material-icons-outlined">logout</span><span class="mt-1 ms-2">Déconnexion</span></a></li>
+                    </ul>
+                    
+                  </label>
             </div>
 
             <a class="menuBtn me-3" href="#">
@@ -74,6 +88,13 @@
                         <a href="./pages/playlists.html">
                             <span class="material-icons-outlined">video_library</span>
                             Playlists
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./pages/programmation.html">
+                            <span class="material-icons-outlined">event</span>
+                            Programmation
                         </a>
                     </li>
 
