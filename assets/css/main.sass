@@ -266,13 +266,13 @@ main
     width: 100%
     .mask
         width: 100%
-        height: 500px
+        // height: 500px
         z-index: 500
         position: absolute
         background-color: rgba(0, 0, 0, 0.5)
     img
         width: 100%
-        height: 500px
+        // height: 500px
     .playBtn
         position: absolute
         top: calc( 50% - 50px )
@@ -319,15 +319,45 @@ main
     .card
         background-color: white
         border-color: transparent
+        height: 300px
+        .card-header
+            background-color: white
+            border: none
+        .card-body
+            overflow-y: scroll
         .creator
             font-size: 12px
 
 .PlWrapper
     border-radius: 0.25rem
-    .card
+    .card.main
         background-color: white
         border-color: transparent
         overflow-y: scroll
+        .card-header
+            background-color: white
+            border: none
+            display: flex
+            justify-content: space-between
+            align-items: center
+        h6
+            font-weight: 600
+        .fake-taxi
+            width: 100%
+            height: 300px
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    .plViewer
+        .PlList
+            background-color: #f9f9f9
+            border-color: transparent
+            height: 300px
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            .card-header
+                font-size: 13px
+            .card-body
+                overflow-y: scroll
+
+        
     .generalInfos
         display: flex
         justify-content: start
@@ -337,6 +367,21 @@ main
         display: flex
     .PlTitle
         font-weight: 600
+    
+.screen
+    border-color: transparent
+    background-color: #f8f8f8
+    margin: 0.25rem
+    .card-body
+        text-align: center
+        font-size: 48px
+        img
+            height: 48px
+    .card-footer
+        border: none
+        text-align: center
+        font-weight: 500
+        font-size: 13px
 .vod
     position: relative
     display: flex
@@ -387,6 +432,22 @@ main
     color: #00000080
 .disabled
     background-color: #d5d5d5
+
+::-webkit-scrollbar
+    width: 5px;
+    border-radius: 5px;
+
+/* Handle */
+::-webkit-scrollbar-thumb
+    background: $unactive-textcolor;
+    border-radius: 5px;
+
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover
+    background: $unactive-textcolor;
+
+
     
         
 
