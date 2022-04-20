@@ -30,14 +30,14 @@
 
     <body>
 
-        <header class="d-flex flex-row justify-content-between align-items-center">
+        <header class="d-flex flex-row justify-content-between justify-content-sm-between justify-content-md-end justify-content-lg-end align-items-center">
             <a class="mobileLogo ms-3" href="../index.html">
                 <span class="fw-bold text-black text-center">S T R E A <span class="fw-bolder" style="color:#42b740;">M A X</span></span>
             </a>
-            <div class="searchbarWrapper flex-row align-items-center ms-lg-5 ms-md-3">
+            <!-- <div class="searchbarWrapper flex-row align-items-center ms-lg-5 ms-md-3">
                 <span class="material-icons-outlined">search</span>
                 <input class="ms-lg-2 ms-md-1" type="text" placeholder="Rechercher un streamable" aria-label="search">
-            </div>
+            </div> -->
 
             <div class="actionWrapper flex-row align-items-center me-lg-5 me-md-3">
                 <a class="notificationWrapper d-flex flex-row align-items-center me-lg-4 me-md-2">
@@ -154,18 +154,106 @@
                 </div>
                 <div class="col-lg-9 col-md-12">
                     <div class="PlWrapper">
-                        <div class="card main h-100">
+                        <div class="card main">
+                            <div class="card-header">
+                                <h5 class="fw-bold">Playlist 1</h5>
+                                <a href="#" class="text-unactive"><span class="material-icons-outlined">delete</span></a>
+                            </div>
+
                             <div class="card-body">
-                                <div class="card-header">
-                                    <h6 class="">Playlist 1</h6>
-                                    <a href="#" class="text-unactive"><span class="material-icons-outlined">delete</span></a>
+                                
+                                <div class="banner mb-5">
+                                    <div class="mask"></div>
+                                    <img src="../assets/media/img/placeholder/temp_banner.jpg">
+                                    <a href="#" class="overlay-content playBtn text-white">
+                                        <span class="material-icons">
+                                            play_arrow
+                                        </span>
+                                    </a>
+                                </div>
+                      
+                                <!-- <div class="desc">
+                                    <h5 class="fw-bold mb-3">Description</h5>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Nunc eget magna eget mi mattis varius. Etiam et sapien ut turpis varius lacinia at ac urna. 
+                                        Quisque tristique lorem orci, id rutrum nibh viverra sollicitudin. Nullam aliquam, nunc vel porta semper, massa erat posuere leo, vel commodo risus nisi porttitor augue. Ut consectetur lectus a nunc posuere, non placerat dolor mollis. Vivamus at sagittis enim, vel ultrices neque. Cras posuere dignissim leo, nec gravida nunc posuere a.
+                                    </span>
+                                </div> -->
+
+                                <div class="desc mb-3">
+                                    <h6 class="fw-bold mb-3">Description</h6>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Nunc eget magna eget mi mattis varius. Etiam et sapien ut turpis varius lacinia at ac urna. 
+                                        Quisque tristique lorem orci, id rutrum nibh viverra sollicitudin. Nullam aliquam, nunc vel porta semper, massa erat posuere leo, vel commodo risus nisi porttitor augue. Ut consectetur lectus a nunc posuere, non placerat dolor mollis. Vivamus at sagittis enim, vel ultrices neque. Cras posuere dignissim leo, nec gravida nunc posuere a.
+                                    </span>
+                                </div>
+            
+                                <div class="similar">
+                                    <h6 class="fw-bold mb-2">Streamables</h6>
+                                    <div class="row similarWrapper align-items-center">
+
+                                        <!-- begin::col -->
+                                        <a href="#" class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                            <div class="card screen">
+                                                <div class="card-body">
+                                                    <img src="../assets/media/img/add.png">
+                                                </div>
+                                                <div class="card-footer text-black">
+                                                    Ajouter
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- end::col-->
+
+                                        <!-- begin::col -->
+                                        <a href="./streamable.html" class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                            <div class="card screen">
+                                                <div class="card-body">
+                                                    <span class="material-icons-outlined text-unactive">image</span>
+                                                </div>
+                                                <div class="card-footer text-black">
+                                                    Streamable 1
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- end::col-->
+
+                                        <!-- begin::col -->
+                                        <a href="./streamable.html" class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                            <div class="card screen">
+                                                <div class="card-body">
+                                                    <span class="material-icons-outlined text-unactive">image</span>
+                                                </div>
+                                                <div class="card-footer text-black">
+                                                    Streamable 2
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- end::col-->
+
+                                        <!-- begin::col -->
+                                        <a href="./streamable.html" class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                            <div class="card screen">
+                                                <div class="card-body">
+                                                    <span class="material-icons-outlined text-unactive">image</span>
+                                                </div>
+                                                <div class="card-footer text-black">
+                                                    Streamable 3
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- end::col-->
+
+                                    </div>
                                 </div>
 
-                                <div class="row plViewer">
+                                <!-- <div class="row plViewer">
                                     <div class="col-md-12 col-lg-6">
 
                                         <div class="banner">
-                                            <!-- <div class="mask"></div> -->
+                                            
                                             <img class="rounded fake-taxi" src="../assets/media/img/placeholder/temp_banner.jpg">
                                             <a href="#" class="overlay-content playBtn text-white">
                                                 <span class="material-icons">
@@ -181,7 +269,7 @@
                                                 <div class="d-flex flex-row align-items-center justify-content-between w-100">
                                                     
                                                     <div class="d-flex flex-column">
-                                                        <!-- <h6>Vidéo(s)</h6> -->
+                                                        
                                                         <span class="creator text-muted">5 Vidéo(s)</span>
                                                     </div>
                                                     
@@ -216,7 +304,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                             </div>
                         </div>

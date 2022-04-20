@@ -530,6 +530,9 @@ main {
 .PlWrapper .card.main {
   background-color: white;
   border-color: transparent;
+}
+
+.PlWrapper .card.main .card-body {
   overflow-y: scroll;
 }
 
