@@ -600,26 +600,89 @@ main {
   font-weight: 600;
 }
 
-.screen {
+.addWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.addWrapper .add {
   border-color: transparent;
+  border-radius: 0.5rem;
+  color: #3DB13D;
+  background-color: transparent;
+}
+
+.addWrapper .add .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.addWrapper .add .card-body img {
+  height: 48px;
+  width: 48px;
+}
+
+.screen {
+  border: 2px dashed #d8d8d8;
   background-color: #f8f8f8;
   margin: 0.25rem;
 }
 
+.screen .check {
+  font-size: 16px;
+  position: absolute;
+  top: 0;
+  right: 8px;
+  display: none;
+}
+
+.screen.active {
+  border: 1px solid #3DB13D;
+  color: #3DB13D;
+}
+
+.screen.active .check {
+  display: inline;
+}
+
+.screen.active .card-body {
+  color: #3DB13D;
+}
+
 .screen .card-body {
   text-align: center;
-  font-size: 48px;
+  color: #848484;
+  font-weight: 500;
+  font-size: 13px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .screen .card-body img {
   height: 48px;
-}
-
-.screen .card-footer {
-  border: none;
-  text-align: center;
-  font-weight: 500;
-  font-size: 13px;
+  margin-bottom: 1.5rem;
 }
 
 .vod {

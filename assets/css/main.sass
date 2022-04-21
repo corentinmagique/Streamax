@@ -368,21 +368,57 @@ main
         display: flex
     .PlTitle
         font-weight: 600
+.addWrapper
+    display: flex
+    justify-content: center
+    .add
+        // border: 4px dotted $main-color
+        border-color: transparent
+        border-radius: 0.5rem
+        color: $main-color
+        // font-weight: bold
+        background-color: transparent
+        
+        .card-body
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            overflow: hidden
+            img
+                height: 48px
+                width: 48px
     
 .screen
-    border-color: transparent
+    border: 2px dashed #d8d8d8
     background-color: #f8f8f8
     margin: 0.25rem
+    .check
+        font-size: 16px
+        position: absolute
+        top: 0
+        right: 8px
+        display: none
+    &.active
+        border: 1px solid $main-color
+        color: $main-color
+        .check
+            display: inline
+        .card-body
+            color: $main-color
     .card-body
         text-align: center
-        font-size: 48px
-        img
-            height: 48px
-    .card-footer
-        border: none
-        text-align: center
+        color: $unactive-textcolor
         font-weight: 500
         font-size: 13px
+        overflow: hidden
+        display: flex
+        flex-direction: column
+        
+        img
+            height: 48px
+            margin-bottom: 1.5rem
+        
 .vod
     position: relative
     display: flex
