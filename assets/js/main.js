@@ -275,6 +275,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
                         </div>
                     `)
                     modalCardBody.appendChild(modalContent)
+                    $('.loadSelect2').select2();
                     
                 break;
 
@@ -325,6 +326,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
                         </div>
                     `)
                     modalCardBody.appendChild(modalContent)
+                    $('.loadSelect2').select2();
                     
                 break;
                 case 'add-Screen':
@@ -388,7 +390,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 break;
             }
 
-            $('.loadSelect2').select2();
+            
             let closeModal = document.querySelectorAll('.closeModal')
 
             closeModal.forEach((el)=>{

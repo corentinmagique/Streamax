@@ -849,6 +849,39 @@ sup {
   color: #9d9d9d;
 }
 
+.login-card {
+  border-color: transparent;
+}
+
+.loginInput {
+  border: 1px dashed #e9e9e9;
+  border-radius: 0.5rem;
+  background-color: #f9f9f9;
+  color: #848484;
+  outline: none;
+  height: 40px;
+}
+
+.loginInput::-webkit-input-placeholder {
+  color: #848484;
+}
+
+.loginInput:-ms-input-placeholder {
+  color: #848484;
+}
+
+.loginInput::-ms-input-placeholder {
+  color: #848484;
+}
+
+.loginInput::placeholder {
+  color: #848484;
+}
+
+.bg-unpeusombre {
+  background-color: #f5f5f5;
+}
+
 .text-main {
   color: #3DB13D;
 }
