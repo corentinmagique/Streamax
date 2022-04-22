@@ -10,6 +10,7 @@ body, html {
   height: 100%;
   font-family: 'Poppins';
   font-size: 15px;
+  background-color: #f6f6f6;
 }
 
 a {
@@ -203,6 +204,10 @@ header {
   .menuBtn {
     display: none;
   }
+}
+
+.settingsWrapper {
+  padding: 10px;
 }
 
 main {
@@ -638,6 +643,49 @@ main {
   width: 48px;
 }
 
+.card.streamable-desc {
+  border-color: transparent;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.card.streamable-desc .card-header {
+  background-color: #fff;
+}
+
+.card.streamable-desc .card-header .title {
+  font-weight: 600;
+}
+
+.card.streamable-desc .author-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: row;
+      -ms-flex: row;
+          flex: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card.streamable-desc .author-section h5 {
+  font-weight: 600;
+}
+
+.card.streamable-desc .card-body {
+  padding: 25px;
+}
+
+.card.streamable-desc .card-body span {
+  line-height: 2;
+  font-size: 14px;
+}
+
 .screen {
   border: 2px dashed #d8d8d8;
   background-color: #f8f8f8;
@@ -818,16 +866,48 @@ main {
   text-transform: uppercase;
 }
 
+.widget-title-wrapper {
+  border-bottom: 1px solid #e9ecef;
+  margin-bottom: 1.5rem;
+  z-index: 2;
+}
+
 .widget-title {
   letter-spacing: 1px;
   font-size: 1.1rem;
   font-weight: 600;
   line-height: 1.5rem;
+  margin-bottom: 1rem;
   position: relative;
   display: inline-block;
   text-transform: uppercase;
   font-family: poppins,sans-serif;
   color: #666;
+}
+
+.widget-title::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 50px;
+  left: 0;
+  bottom: -1rem;
+  background: #3DB13D;
+}
+
+.meta {
+  color: #aaa;
+  font-weight: 400;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.meta .material-icons-outlined {
+  font-size: 16px;
 }
 
 .thumbnail-infos .name {
@@ -1122,7 +1202,7 @@ sup {
 .dd-button {
   display: inline-block;
   border-radius: 4px;
-  padding: 10px 30px 10px 20px;
+  padding: 10px;
   background-color: #ffffff;
   cursor: pointer;
   white-space: nowrap;
@@ -1135,6 +1215,7 @@ sup {
 .dd-menu {
   position: absolute;
   top: 100%;
+  left: -150px;
   border-radius: 4px;
   padding: 0;
   margin: 30px 0 0 0;

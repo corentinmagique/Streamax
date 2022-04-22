@@ -22,6 +22,7 @@ body, html
     height: 100%
     font-family: 'Poppins'
     font-size: 15px
+    background-color: #f6f6f6
 a
     text-decoration: none
     &:hover
@@ -124,7 +125,8 @@ header
     color: $unactive-textcolor
     @media screen and ( min-width: $breakpoint_laptop)
         display: none
-
+.settingsWrapper
+    padding: 10px 
 main
     position: absolute
     top: 90px
@@ -388,7 +390,32 @@ main
             img
                 height: 48px
                 width: 48px
-    
+
+.card
+    &.streamable-desc
+        border-color: transparent
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+        .card-header
+            background-color: #fff
+            .title
+                font-weight: 600
+        
+        .author-section
+            display: flex
+            flex: row
+            align-items: center
+            padding: 10px
+            width: 100%
+            height: auto
+            border-bottom: 1px solid rgba(0,0,0,.125)
+            h5
+                font-weight: 600
+        .card-body
+            padding: 25px
+            span
+                line-height: 2
+                font-size: 14px
+
 .screen
     border: 2px dashed #d8d8d8
     background-color: #f8f8f8
@@ -511,18 +538,38 @@ main
         border: 1px solid #333
         text-transform: uppercase
         // letter-spacing: 0
+.widget-title-wrapper
+    border-bottom: 1px solid #e9ecef;
+    margin-bottom: 1.5rem;
+    z-index: 2;
 .widget-title 
     letter-spacing: 1px
     font-size: 1.1rem
     font-weight: 600
     line-height: 1.5rem
+    margin-bottom: 1rem;
     position: relative
     display: inline-block
     text-transform: uppercase
     font-family: poppins,sans-serif
     color: #666
+    &::after
+        content: "";
+        position: absolute;
+        height: 4px;
+        width: 50px;
+        left: 0;
+        bottom: -1rem;
+        background: $main-color
 
-
+.meta
+    color: #aaa
+    font-weight: 400
+    font-size: 12px
+    display: flex
+    align-content: center
+    .material-icons-outlined
+        font-size: 16px
 .thumbnail-infos
     .name
         color: #555555
@@ -700,7 +747,7 @@ sup
 .dd-button 
   display: inline-block
   border-radius: 4px
-  padding: 10px 30px 10px 20px
+  padding: 10px
   background-color: #ffffff
   cursor: pointer
   white-space: nowrap
@@ -709,6 +756,7 @@ sup
 .dd-menu 
   position: absolute
   top: 100%
+  left: -150px
   border-radius: 4px
   padding: 0
   margin: 30px 0 0 0

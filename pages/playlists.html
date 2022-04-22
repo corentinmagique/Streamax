@@ -41,30 +41,51 @@
                 <input class="ms-lg-2 ms-md-1" type="text" placeholder="Rechercher un streamable" aria-label="search">
             </div> -->
 
-            <div class="actionWrapper flex-row align-items-center me-lg-5 me-md-3">
-                <a class="notificationWrapper d-flex flex-row align-items-center me-lg-4 me-md-2">
-                    <span class="material-icons-outlined">notifications</span>
-                </a>
+            <div class="actionWrapper flex-row align-items-center me-3">
+                
 
                 <label class="dropdown">
 
                     <div class="dd-button">
-                        <div class="userWrapper d-flex flex-row align-items-center">
-                            <img class="userImg rounded-circle me-1" src="../assets/media/img/placeholder/temp_user.jpg" alt="user picture">
-                            <span class="userName me-1">Corentin C.</span>
-                            <span class="material-icons-outlined">expand_more</span>
+                        <div class="notificationWrapper d-flex flex-row align-items-center">
+                            <span class="material-icons">help</span>
                         </div>
                     </div>
                   
                     <input type="checkbox" class="dd-input" id="test">
                   
                     <ul class="dd-menu">
-                        <li><a href="./user.html"><span class="material-icons-outlined">tune</span><span class="mt-1 ms-2">Paramètres</span></a></li>
+                        <li><a href="#">Aide</a></li>
+                        <li><a href="#">Envoyer un commentaire</a></li>
+                    </ul>
+                    
+                </label>
+
+                <a href="./user.html" class="settingsWrapper text-center d-flex justify-content-center flex-row align-items-center">
+                    <span class="material-icons-outlined text-center">settings</span>
+                </a>
+
+                
+
+                <label class="dropdown">
+
+                    <div class="dd-button">
+                        <div class="userWrapper d-flex flex-row align-items-center">
+                            <img class="userImg rounded-circle" src="../assets/media/img/placeholder/temp_user.jpg" alt="user picture">
+                        </div>
+                    </div>
+                  
+                    <input type="checkbox" class="dd-input" id="test">
+                  
+                    <ul class="dd-menu">
+                        <li><a href="./user.html">...</a></li>
                         <li class="divider"></li>
                         <li><a href="#"><span class="material-icons-outlined">logout</span><span class="mt-1 ms-2">Déconnexion</span></a></li>
                     </ul>
                     
-                  </label>
+                </label>
+
+                
             </div>
 
             <a class="menuBtn me-3" href="#">
@@ -90,6 +111,13 @@
                         <a href="./playlists.html">
                             <span class="material-icons-outlined">video_library</span>
                             Playlists
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./screens.html">
+                            <span class="material-icons-outlined">tv</span>
+                            Écrans
                         </a>
                     </li>
 
