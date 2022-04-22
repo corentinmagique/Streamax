@@ -523,13 +523,34 @@ main
     color: #666
 
 
+.thumbnail-infos
+    .name
+        color: #555555
+        font-weight: 600
+    .author, .views, .date
+        color: #aaa
+        font-weight: 400
+        font-size: 12px
+        display: flex
+        align-content: center
+        .material-icons-outlined
+            font-size: 16px
+    .meta
+        .views, .author
+            display: flex
+            align-items: center
 .thumbnail
-    width: 100%
+    width: auto
     height: 100%
     position: relative
     cursor: pointer
     transition: 0.3s
     overflow: hidden
+    &.mini
+        border-radius: 0.25rem
+        height: auto
+        box-shadow: 0 1px 3px RGBA(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+        margin: 0.25em
     .video-hover
         width: 100%
         height: 100%
