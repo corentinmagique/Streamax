@@ -185,18 +185,20 @@
                 <div class="col-lg-9 col-md-12">
                     <div class="PlWrapper">
                         <div class="card main">
-                            <div class="card-header">
-                                <h5 class="fw-bold">Playlist 1</h5>
+                            <div class="d-flex widget-title-wrapper flex-row m-3 mt-5 justify-content-between align-items-center">
+                                <h5 class="text-uppercase widget-title">Playlist 1</h5>
                                 <a href="#" class="openModal text-unactive" dt-modal-size="w-25" id="rem-Pl"><span class="material-icons-outlined">delete</span></a>
                             </div>
 
+                            
+
                             <div class="card-body">
 
-                                <hr>
+                                <!-- <hr> -->
                                 
                                 <div class="banner mb-5">
                                     <div class="mask"></div>
-                                    <img src="../assets/media/img/placeholder/temp_banner.jpg">
+                                    <img class="rounded" src="../assets/media/img/placeholder/temp_banner.jpg">
                                     <a href="#" class="overlay-content playBtn text-white">
                                         <span class="material-icons">
                                             play_arrow
@@ -204,16 +206,82 @@
                                     </a>
                                 </div>
                       
-                                <div class="desc mb-3">
-                                    <h6 class="fw-bold mb-3">Description</h6>
-                                    <span>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                        Nunc eget magna eget mi mattis varius. Etiam et sapien ut turpis varius lacinia at ac urna. 
-                                        Quisque tristique lorem orci, id rutrum nibh viverra sollicitudin. Nullam aliquam, nunc vel porta semper, massa erat posuere leo, vel commodo risus nisi porttitor augue. Ut consectetur lectus a nunc posuere, non placerat dolor mollis. Vivamus at sagittis enim, vel ultrices neque. Cras posuere dignissim leo, nec gravida nunc posuere a.
-                                    </span>
+                                <div class="card streamable-desc m-2">
+                                    <div class="card-header">
+                                        <h4 class="title">Playlist 1</h4>
+                                        <div class="d-flex flex-row mt-2 mb-1">
+                                            <div class="meta d-flex flex-row align-items-center me-2">
+                                                <span class="material-icons-outlined me-1">calendar_today</span>
+                                                <span>Il y a 8 mois</span>
+                                            </div>
+                    
+                                            <div class="meta d-flex flex-row align-items-center me-2">
+                                                <span class="material-icons-outlined me-1">visibility</span>
+                                                <span>0 vues</span>
+                                            </div>
+                                    
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <span>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Nunc eget magna eget mi mattis varius. Etiam et sapien ut turpis varius lacinia at ac urna. 
+                                            Quisque tristique lorem orci, id rutrum nibh viverra sollicitudin.
+                                        </span>
+                                    </div>
                                 </div>
-            
-                                <div class="similar">
+
+                                <div class="d-flex widget-title-wrapper flex-row m-3 mt-5 justify-content-between align-items-center">
+                                    <h5 class="text-uppercase widget-title">Streamables</h5>
+                                    <a href="#" id="add-Stbl" dt-modal-size="w-75" class="openModal"><img height="18px" src="../assets/media/img/add.png"></a>
+                                </div>
+
+                                <div id="grid" class="row justify-content-center">
+                                    <div id="gridDemo" class="col">
+
+                                        <div class="pl-el thumbnail mini">
+                                            <img src="../assets/media/img/placeholder/temp_vod1.jpg">
+                                            <!-- <div class="video-length badge">01:25</div> -->
+                                            <div class="video-hover">
+                                                <span class="material-icons" style="font-size: 24px;">pan_tool</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="pl-el thumbnail mini">
+                                            <img src="../assets/media/img/placeholder/temp_vod2.jpg">
+                                            <div class="video-hover">
+                                                <span class="material-icons" style="font-size: 24px;">pan_tool</span>
+                                            </div>
+                                            <!-- <div class="video-length badge">01:25</div> -->
+                                            <!-- <div class="video-hover">
+                                                <span class="material-icons">play_arrow</span>
+                                            </div> -->
+                                        </div>
+
+                                        <div class="pl-el thumbnail mini">
+                                            <img src="../assets/media/img/placeholder/temp_vod3.jpg">
+                                            <div class="video-hover">
+                                                <span class="material-icons" style="font-size: 24px;">pan_tool</span>
+                                            </div>
+                                            <!-- <div class="video-length badge">01:25</div> -->
+                                            <!-- <div class="video-hover">
+                                                <span class="material-icons">play_arrow</span>
+                                            </div> -->
+                                        </div>
+
+                                        <div class="pl-el thumbnail mini">
+                                            <img src="../assets/media/img/placeholder/temp_vod4.jpg">
+                                            <div class="video-hover">
+                                                <span class="material-icons" style="font-size: 24px;">pan_tool</span>
+                                            </div>
+                                            <!-- <div class="video-hover">
+                                                <span class="material-icons">play_arrow</span>
+                                            </div> -->
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <!-- <div class="similar">
                                     <h6 class="fw-bold mb-2">Streamables</h6>
                                     <div class="row similarWrapper align-items-center">
 
@@ -248,7 +316,7 @@
                                         </a>
 
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <!-- <div class="row plViewer">
                                     <div class="col-md-12 col-lg-6">
@@ -318,6 +386,8 @@
         
         <script src="../assets/js/lib/jquery-3.6.0.min.js"></script>
         <script src="../assets/js/lib/bootstrap.bundle.min.js"></script>
+        <!-- jsDelivr :: Sortable :: Latest (https://www.jsdelivr.com/package/npm/sortablejs) -->
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
         <script src="../assets/js/main.js"></script>
     </body>
 </html>

@@ -32,6 +32,13 @@ document.querySelector('body').appendChild(modalDom)
 
 
 window.addEventListener("DOMContentLoaded", (event) => {
+
+    var el = document.getElementById('gridDemo');
+    var sortable = new Sortable(el, {
+        animation: 150,
+        ghostClass: 'monFuturPlace',
+        easing: "cubic-bezier(1, 0, 0, 1)",
+    });
     /* More elements */
     let moreBtn = document.querySelector('.moreBtn')
     let moreMenu = document.querySelector('.moreMenu')
