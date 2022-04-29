@@ -1,0 +1,93 @@
+.planning {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.planning thead {
+  border-bottom: 3px dashed rgba(0, 0, 0, 0.05);
+}
+
+.planning thead tr th {
+  text-align: center;
+  color: #c5c5c5;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 1em;
+  height: 60px;
+}
+
+.planning tbody tr {
+  border-bottom: 3px dashed rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.planning tbody tr td {
+  font-weight: 600;
+  font-size: 10px;
+  font-style: italic;
+  color: #555;
+  text-align: center;
+}
+
+.planning tbody tr td span {
+  color: #d8d8d8;
+  font-size: 48px;
+  display: none;
+}
+
+.planning tbody tr td:hover span {
+  display: inline;
+}
+
+.planning tbody tr td:first-child {
+  text-align: center;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  font-size: 13px;
+}
+
+@media screen and (min-width: 1025px) {
+  .planning tbody tr td:first-child {
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+  }
+}
+
+.planning tbody tr td:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+.planning tbody tr td:nth-child(odd) {
+  background-color: #fafafa;
+}
+
+a .slot {
+  width: 100%;
+  height: 100%;
+}
+
+.slot {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slot .time {
+  font-weight: 600;
+  padding: 0.25rem;
+}
+/*# sourceMappingURL=Planning.css.map */

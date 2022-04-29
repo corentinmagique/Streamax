@@ -1,10 +1,10 @@
-let stringToHtml = (template) => {
+var stringToHtml = (template) => {
     const parser = new DOMParser()
     const element = parser.parseFromString(template, "text/html")
     return element.body.firstChild
 }
 
-let removeAllChildNodes =  (parent) => {
+var removeAllChildNodes =  (parent) => {
     while (parent.firstChild) {
       parent.removeChild(parent.firstChild)
     }
@@ -33,12 +33,30 @@ document.querySelector('body').appendChild(modalDom)
 
 window.addEventListener("DOMContentLoaded", (event) => {
 
-    var el = document.getElementById('gridDemo');
-    var sortable = new Sortable(el, {
-        animation: 150,
-        ghostClass: 'monFuturPlace',
-        easing: "cubic-bezier(1, 0, 0, 1)",
-    });
+    var anchors = document.getElementsByTagName('a')
+
+    for(var i = 0, len = anchors.length; i < len; i++) {
+        var thisAnchor = anchors[i]
+        thisAnchor.onclick = function () {
+            var btn = this.parentNode.parentNode.querySelector('button span.title')
+            btn.innerHTML = this.innerHTML
+        }
+    }
+
+    
+    // var el = document.getElementById('gridDemo')
+    // var sortable = new Sortable(el, {
+    //     animation: 150,
+    //     ghostClass: 'monFuturPlace',
+    //     easing: "cubic-bezier(1, 0, 0, 1)",
+    // });
+
+    // let planning = new Planning('.calendar')
+    // planning.init()
+
+    new Planning('.calendar').init()
+
+
     /* More elements */
     let moreBtn = document.querySelector('.moreBtn')
     let moreMenu = document.querySelector('.moreMenu')

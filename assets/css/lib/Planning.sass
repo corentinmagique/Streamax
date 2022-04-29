@@ -1,0 +1,64 @@
+//LAYOUT BREAKPOINTS
+$breakpoint_mobile: 320px
+$breakpoint_tablet: 481px
+$breakpoint_laptop: 769px
+$breakpoint_desktop: 1025px
+$breakpoint_tv: 1201px
+
+.planning
+    width: 100%
+    height: 100%
+    position: relative
+    thead
+        border-bottom: 3px dashed rgba(0,0,0,0.05)
+        tr
+            th
+                text-align: center
+                color: #c5c5c5
+                font-weight: 500
+                text-transform: uppercase
+                padding: 1em
+                height: 60px
+    tbody
+        tr
+            border-bottom: 3px dashed rgba(0,0,0,0.05)
+            cursor: pointer
+            td
+                font-weight: 600
+                font-size: 10px
+                font-style: italic
+                color: #555
+                text-align: center
+                span
+                    color: #d8d8d8
+                    font-size: 48px
+                    display: none
+                &:hover
+                    span
+                        display: inline
+                &:first-child
+                    text-align: center
+                    writing-mode: vertical-lr
+                    @media screen and ( min-width: $breakpoint_desktop)
+                        writing-mode: horizontal-tb
+                    font-size: 13px
+                &:nth-child(even)
+                    background-color: #f5f5f5
+                &:nth-child(odd)
+                    background-color: #fafafa
+a
+    .slot
+        width: 100%
+        height: 100%
+
+.slot
+    z-index: 1
+    position: absolute
+    top: 50%
+    left: 50%
+    display: flex
+    flex-direction: column
+    align-items: center
+    .time
+        font-weight: 600
+        padding: 0.25rem

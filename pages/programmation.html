@@ -23,7 +23,7 @@
         <!-- BOOTSTRAP CSS -->
         <link href="../assets/css/lib/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
-    
+        <link href='../assets/css/lib/Planning.css' rel='stylesheet' />
         <!-- MAIN CSS -->
         <link href="../assets/css/main.css" rel="stylesheet" type="text/css">
 
@@ -140,152 +140,40 @@
         </div>
 
         <main>
-            <div class="row h-100">
-                <div class="col-lg-3 col-md-12">
+            <div class="progWrapper">
+                <div class="card">
+                    <div class="card-header">
+
+                        <div class="dropdown">
+                            <button class="dropbtn">
+                                <span class="title">
+                                    Hebdomadaire
+                                </span>
+                                <span class="material-icons-outlined">
+                                    expand_more
+                                </span>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="#">Hebdomadaire</a>
+                                <a href="#">Évènements</a>
+                            </div>
+                        </div>
                     
-                    <div class="myPlsWrapper">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="d-flex flex-row align-items-center justify-content-between">
-                                    <div class="d-flex flex-column">
-                                        <h6>Mes Programmations</h6>
-                                        <span class="creator text-muted">3 Programmation(s)</span>
-                                    </div>
-                                    
-                                    <a href="#" dt-modal-size="w-50" id="add-Prog" class="openModal"><span class="material-icons text-main ms-auto">add</span></a>
-                                </div>
-                            </div>
-                            <div class="card-body"> 
-                                 <div class="vodWrapper mt-3">
+                    </div>
+                    <div class="card-body">
+                        <div class="calendar">
 
-                                    <div class="vod current">
-                                        <img class="rounded" height="48px" width="48px" src="../assets/media/img/placeholder/temp_prog.jpg">
-                                        <span class="title">Prog. 1</span>
-                                    </div>
-
-                                    <div class="vod">
-                                        <img class="rounded" height="48px" width="48px" src="../assets/media/img/placeholder/temp_prog.jpg">
-                                        <span class="title">Prog. 2</span>
-                                    
-                                    </div>
-
-                                    <div class="vod">
-                                        <img class="rounded" height="48px" width="48px" src="../assets/media/img/placeholder/temp_prog.jpg">
-                                        <span class="title">Prog. 3</span>
-                                    </div>                            
-                                 </div>
-                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="col-lg-9 col-md-12">
-                    <div class="PlWrapper">
-                        <div class="card main h-100">
-                            <div class="card-body">
-
-                                <div class="d-flex widget-title-wrapper flex-row m-3 mt-5 justify-content-between align-items-center">
-                                    <h5 class="text-uppercase widget-title">Programmation 1</h5>
-                                    <a href="#" dt-modal-size="w-25" id="rem-Prog" class="openModal text-unactive"><span class="material-icons-outlined">delete</span></a>
-                                </div>
-
-                                <span class="mt-3 mb-3 text-unactive guineguine-text fw-bold">Créneaux</span>
-
-                                <div class="row align-items-center">
-
-                                    <a href="#" id="add-Cren" dt-modal-size="w-75" class="addWrapper col-lg-3 col-md-4 col-sm-6 openModal text-black">
-                                        <div class="card w-50 add">
-                                            <div class="card-body">
-                                                <img src="../assets/media/img/add.png">
-                                                
-                                            </div>
-                                            
-                                        </div>
-                                    </a>
-
-                                    <a href="#" id="add-Cren" dt-modal-size="w-50" class="col-lg-3 col-md-4 col-sm-6 text-black openModal">
-                                        <div class="card screen">
-                                            <div class="card-body">
-                                                <span class="material-icons-outlined text-unactive mt-2 mb-2">timer</span>
-                                                <span>Lun. 14h00-16h00</span>
-                                            </div>
-                
-                                        </div>
-                                    </a>
-
-                                </div>
-
-                                <span class="mt-3 mb-3 text-unactive guineguine-text fw-bold">Évènements</span>
-                                
-                                <div class="row">
-
-                                    <a href="#" id="add-Event" dt-modal-size="w-75" class="addWrapper col-lg-3 col-md-4 col-sm-6 openModal text-black">
-                                        <div class="card w-50 add">
-                                            <div class="card-body">
-                                                <img src="../assets/media/img/add.png">
-                                            
-                                            </div>
-                                            
-                                        </div>
-                                    </a>
-
-                                    <a href="#" id="add-Event" dt-modal-size="w-50" class="col-lg-3 col-md-4 col-sm-6 openModal text-black">
-                                        <div class="card screen">
-                                            <div class="card-body">
-                                                <span class="material-icons-outlined text-unactive mt-2 mb-2">event_note</span>
-                                                <span>14 Février</span>
-                                            </div>
-                                        </div>
-                                    </a>
-
-                                </div>
-
-                                <span class="mt-3 mb-3 text-unactive guineguine-text fw-bold">Écrans associés</span>
-                                
-                                <div class="row">
-
-                                    <a href="#" id="add-Screen" dt-modal-size="w-75" class="addWrapper col-lg-3 col-md-4 col-sm-6 openModal text-black">
-                                        <div class="card w-50 add">
-                                            <div class="card-body">
-                                                <img src="../assets/media/img/add.png">
-                                    
-                                            </div>
-                                            
-                                        </div>
-                                    </a>
-
-                                    <a href="#" id="add-Screen" dt-modal-size="w-50" class="col-lg-3 col-md-4 col-sm-6 openModal text-black">
-                                        <div class="card screen">
-                                            <div class="card-body">
-                                                <span class="material-icons-outlined text-unactive mt-2 mb-2">desktop_windows</span>
-                                                <span>TV001</span>
-                                            </div>
-                                
-                                        </div>
-                                    </a>
-
-                                    <a href="#" id="add-Screen" dt-modal-size="w-50" class="col-lg-3 col-md-4 col-sm-6 openModal text-black">
-                                        <div class="card screen">
-                                            <div class="card-body">
-                                                <span class="material-icons-outlined text-unactive mt-2 mb-2">desktop_windows</span>
-                                                <span>TV002</span>
-                                            </div>
-                                
-                                        </div>
-                                    </a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                        
             </div>
         </main>
         
         <script src="../assets/js/lib/jquery-3.6.0.min.js"></script>
         <script src="../assets/js/lib/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script src='../assets/js/lib/Planning.js'></script>
         <script src="../assets/js/main.js"></script>
+        
     </body>
 </html>
