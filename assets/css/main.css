@@ -1147,6 +1147,7 @@ sup {
   border-color: transparent;
   z-index: 300;
   background-color: transparent;
+  text-align: center;
 }
 
 .loginInput {
@@ -1157,11 +1158,15 @@ sup {
   outline: none;
   height: 50px;
   width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media screen and (min-width: 769px) {
   .loginInput {
     width: 500px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
 }
 
@@ -1489,8 +1494,8 @@ hr {
 
 .logo {
   color: #f1f1f1;
-  width: 250px;
-  height: 100px;
+  width: 300px;
+  height: 125px;
   padding: 20px;
   z-index: 300;
 }
