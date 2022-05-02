@@ -20,6 +20,8 @@
         <!-- APP FAVICON -->
         <link rel="shortcut icon" href="">
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
         <!-- BOOTSTRAP CSS -->
         <link href="../assets/css/lib/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
@@ -29,16 +31,24 @@
     </head>
 
     <body class="bg-unpeusombre">
-        <!-- begin::Wrapper -->
-        <div class="d-flex flex-column align-items-center justify-content-center h-100">
+       
+
+        <video autoplay muted loop id="myVideo">
+            <source src="https://static.videezy.com/system/resources/previews/000/004/386/original/TIMELAPSE_SUNSET_1.mp4" type="video/mp4">
+        </video>
+
+        <img class="logo animate__animated animate__fadeInUp"  src="../assets/media/img/logo streamax.png">
+
+         <!-- begin::Wrapper -->
+         <div class="d-flex flex-column align-items-center justify-content-center h-100">
             <!-- begin::Login card -->
-            <div class="card login-card bg-darker animate__animated animate__bounceInDown">
+            <div class="card login-card bg-darker animate__animated ">
                 <!-- begin::Login card-body -->
                 <div class="card-body">
                     <!-- begin::Logo Wrapper -->
-                    <div class="logo-wrapper d-flex flex-row align-items-center justify-content-center">
+                    <!-- <div class="logo-wrapper d-flex flex-row align-items-center justify-content-center">
                         <span class="fw-bold text-black text-center">S T R E A <span class="fw-bolder" style="color:#42b740;">M A X</span></span>
-                    </div>
+                    </div> -->
                     <!-- end::Logo Wrapper -->
                     
                     <!-- begin::Login Form -->
@@ -86,11 +96,7 @@
         </div>
         <!-- end::Wrapper -->
 
-        <!-- begin::Footer -->
-        <div class="login-page-footer">
-            <span class="gray fs-normal"> © STREAMAX - NIXIA 2022 </span>
-        </div>
-        <!-- end::Footer -->
+        <div class="mask"></div>
    
         <script src="assets/js/lib/jquery-3.6.0.min.js"></script>
         <script src="assets/js/lib/bootstrap.bundle.min.js"></script>

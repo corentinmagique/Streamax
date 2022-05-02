@@ -12,36 +12,40 @@ var removeAllChildNodes =  (parent) => {
 
 
 let modalDom = stringToHtml(`
-    <div id="modal" class="">
-        <div id="header">
-        </div>
-        <div id="modal-container" class="d-flex flex-column justify-content-center align-items-center animate__animated animate__fadeIn">
-            <div class="card">
-                <div class="card-header d-flex justify-content-end">
-                    <a href="#" class="closeModal"><span class="material-icons-outlined text-unactive">close</span></a>
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content" role="document">
+                <div class="modal-header">
+                    <h5 class="modal-title" >Modal title</h5>
+                    <a href="#" class="closeModal">
+                        <span class="material-icons-outlined text-secondary">close</span>
+                    </a>
                 </div>
-                <div class="card-body">
-                    
+                <div class="modal-body">
+                
+                </div>
+                <div class="modal-footer">
+                
                 </div>
             </div>
         </div>
     </div>
 `)
 
-document.querySelector('body').appendChild(modalDom)
+document.documentElement.appendChild(modalDom)
 
 
 window.addEventListener("DOMContentLoaded", (event) => {
 
-    var anchors = document.getElementsByTagName('a')
+    // var anchors = document.getElementsByTagName('a')
 
-    for(var i = 0, len = anchors.length; i < len; i++) {
-        var thisAnchor = anchors[i]
-        thisAnchor.onclick = function () {
-            var btn = this.parentNode.parentNode.querySelector('button span.title')
-            btn.innerHTML = this.innerHTML
-        }
-    }
+    // for(var i = 0, len = anchors.length; i < len; i++) {
+    //     var thisAnchor = anchors[i]
+    //     thisAnchor.onclick = function () {
+    //         var btn = this.parentNode.parentNode.querySelector('button span.title')
+    //         btn.innerHTML = this.innerHTML
+    //     }
+    // }
 
     
     // var el = document.getElementById('gridDemo')
@@ -54,7 +58,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     // let planning = new Planning('.calendar')
     // planning.init()
 
-    new Planning('.calendar').init()
+    // new Planning('.calendar').init()
 
 
     /* More elements */
@@ -76,353 +80,330 @@ window.addEventListener("DOMContentLoaded", (event) => {
     
 
     /*Modal elements */
-    let openModals = document.querySelectorAll('.openModal')
-    let modalContainer = document.querySelector('#modal')
-    let modalCard = modalContainer.querySelector('.card')
-    let modalCardBody = modalCard.querySelector('.card-body')
+    let modal = document.querySelector('#modal')
+    let modalBody = modal.querySelector('.modal-body')
+    let modalFooter = modal.querySelector('.modal-footer')
+    let openBtns = document.querySelectorAll('.openModal')
+    let closeBtns = document.querySelectorAll('.closeModal')
 
-    openModals.forEach((el)=>{
+    openBtns.forEach((el)=>{
         el.addEventListener('click', ()=>{
 
             let id = el.id
-            let modalSize = el.getAttribute('dt-modal-size')
             let modalContent = null
-
-
-            modalCard.classList.remove(modalSize)
-            modalCard.classList.add(modalSize)
-            
-            modalContainer.classList.add('active')
-
             switch(id)
             {
                 case 'add-Pl':
                     modalContent = stringToHtml(`
-                        <div>
-
-                            <div class="row justify-content-between align-items-center">
-                                <div class="col-sm-8 col-md-6 col-12">
-                                    <div class="form-group m-2">
-                                        <label for="Pl-name" class="col-form-label fw-bold">Ajouter une Playlist</label>
-                                        <input type="text" class="form-control" id="Pl-name" placeholder="Nom playlist">
-                                    </div>
+                        <div class="row" style="align-items: center;">
+                            <div class="col-lg-6 col-12">
+                                <div class="form-group m-2">
+                                    <label for="pl-name" class="col-form-label">Nom de la playlist</label>
+                                    <input type="text" class="form-control" id="pl-name" value="">
                                 </div>
-
                             </div>
-
-                            <div class="row justify-content-end align-items-center">
-                                <button class="tamerBtn closeModal">Ajouter</button>
+                            <div class="row justify-content-end">
+                                <button class="tamerBtn">Créer</button>
                             </div>
-
                         </div>
                     `)
-                    modalCardBody.appendChild(modalContent)
+                    modal.querySelector('.modal-header .modal-title').innerText = 'Ajouter une playlist'
+                    modalBody.appendChild(modalContent)
                 break;
-                case 'rem-Pl':
+                case 'add-Stmb':
                     modalContent = stringToHtml(`
-                        <div class="d-flex flex-row justify-content-center align-items-center">
-                            <button class="btn m-1 closeModal">Annuler</button>
-                            <button class="tamerBtn m-1 closeModal">Supprimer</button>
-                        </div>
-                    `)
-                    modalCardBody.appendChild(modalContent)
-                break;
-                case 'add-Stbl':
-                    modalContent = stringToHtml(`
-                        <div class="d-flex flex-row justify-content-center align-items-center">
-                            <div>
-                            
-                                <div class="searchbarWrapper flex-row justify-content-center align-items-center ms-lg-5 ms-md-3">
-                                    <span class="material-icons-outlined">search</span>
-                                    <input class="ms-lg-2 ms-md-1" type="text" placeholder="Rechercher un streamable" aria-label="search">
+                    <div><div class="d-flex widget-title-wrapper flex-row m-3 justify-content-between align-items-center">
+                        <h5 class="text-uppercase widget-title">Ma Bibliothèque</h5>
+                        
+                    </div>
+    
+                
+    
+                    <div class="row">
+        
+                        <a href="#" class="col-lg-3 col-md-6 col-12 streamable">
+                            <div class="thumbnail mini">
+                                <img src="../assets/media/img/placeholder/temp_vod2.jpg">
+                                <div class="video-length badge">01:25</div>
+                                <div class="video-hover">
+                                    <span class="material-icons">add</span>
                                 </div>
-                                
-                                <div class="categoryWrapper row justify-content-center align-items-center">
-                                    <a href="#" class="col-md-2 col-sm-4 col-6 category current">
-                                        <div>
-                                            <img src="../assets/media/img/placeholder/temp_cat1.png" alt="sport category">
-                                            <span>Catégorie1</span>
-                                        </div>
-                                    </a>
-
-                                    <a href="#" class="col-md-2 col-sm-4 col-6 category">
-                                        <div>
-                                            <img src="../assets/media/img/placeholder/temp_cat1.png" alt="sport category">
-                                            <span>Catégorie2</span>
-                                        </div>
-                                    </a>
-
-                                    <a href="#" class="col-md-2 col-sm-4 col-6 category">
-                                        <div>
-                                            <img src="../assets/media/img/placeholder/temp_cat1.png" alt="sport category">
-                                            <span>Catégorie3</span>
-                                        </div>
-                                    </a>
-
-                                    <a href="#" class="col-md-2 col-sm-4 col-6 category">
-                                        <div>
-                                            <img src="../assets/media/img/placeholder/temp_cat1.png" alt="sport category">
-                                            <span>Catégorie4</span>
-                                        </div>
-                                    </a>
-
-                                    <a href="#" class="col-md-2 col-sm-4 col-6 category">
-                                        <div>
-                                            <img src="../assets/media/img/placeholder/temp_cat1.png" alt="sport category">
-                                            <span>Catégorie5</span>
-                                        </div>
-                                    </a>
-
-                                    <a href="#" class="col-md-2 col-sm-4 col-6 category">
-                                        <div>
-                                            <img src="../assets/media/img/placeholder/temp_cat1.png" alt="sport category">
-                                            <span>Catégorie6</span>
-                                        </div> 
-                                    </a>
+                            </div>
+                            <div class="row">
+                                <div class="col-2 d-flex justify-content-center align-items-center">
+                                    <img height="32px" class="m-2 author-pic rounded-circle" src="../assets/media/img/placeholder/nixia.png">
                                 </div>
-
-                                <h5 class="m-3">Catégorie1</h5>
-
-                                <div class="row catalogWrapper">
-                                    <!-- begin::col -->
-                                    <a href="./streamable.html" class="col-12 col-md-6 col-lg-4 col-xl-3">
-                                        <!-- begin::streamable card -->
-                                        <div class="streamable-card">
-                                            
-                                            <img src="../assets/media/img/placeholder/streamable.jpg" alt="Streamable picture">
-                                                
-                                            <div class="streamable-desc">
-                                                <h6>
-                                                    The Wild Things Are
-                                                </h6>
-                                                <span class="fw-bold" style="color:#42b740;">8.6</span>
+                                <div class="col-10">
+                                    <div class="d-flex flex-column m-2 thumbnail-infos">
+                                        <span class="name">Streamable1</span>
+                                        <div class="author me-2">
+                                            <span class="material-icons-outlined me-1">person</span>
+                                            <span>Nixia</span>
+                                        </div>
+        
+                                        <div class="row">
+                                            <div class="views col-6">
+                                                <span class="material-icons-outlined me-1">visibility</span>
+                                                <span>153 vues</span>
+                                            </div>
+                                            <div class="date col-6">
+                                                <span class="material-icons-outlined me-1">calendar_today</span>
+                                                <span>8 mois</span>
                                             </div>
                                         </div>
-                                        <!-- begin::streamable card -->
-                                    </a>
-                                    <!-- end::col-->
-                                </div>
-
-                            </div>
-                        </div>
-                    `)
-                    modalCardBody.appendChild(modalContent)
-                break;
-                case 'add-Prog':
-                    modalContent = stringToHtml(`
-                        <div>
-
-                            <div class="row justify-content-between align-items-center">
-                                <div class="col-sm-8 col-md-6 col-12">
-                                    <div class="form-group m-2">
-                                        <label for="Pl-name" class="col-form-label fw-bold">Ajouter une Programmation</label>
-                                        <input type="text" class="form-control" id="Pl-name" placeholder="Nom programmation">
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="row justify-content-end align-items-center">
-                                <button class="tamerBtn closeModal">Ajouter</button>
-                            </div>
-
-                        </div>
-                    `)
-                    modalCardBody.appendChild(modalContent)
-                break;
-                case 'rem-Prog':
-                    modalContent = stringToHtml(`
-                        <div class="d-flex flex-row justify-content-center align-items-center">
-                            <button class="btn m-1 closeModal">Annuler</button>
-                            <button class="tamerBtn m-1 closeModal">Supprimer</button>
-                        </div>
-                    `)
-                    modalCardBody.appendChild(modalContent)
-                break;
-                case 'add-Cren':
-                    modalContent = stringToHtml(`
-                        <div>
-                        <h6>Ajouter un créneau</h6>
-                        <hr>
-    
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="form-group d-flex flex-column m-2">
-                                    <label for="day" class="col-form-label text-unactive">Playlists</label>
-                                    <select class="loadSelect2" name="states[]" multiple="multiple" style="width:100%">
-                                        <option value="all">Playlist 1</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        
-    
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="form-group d-flex flex-column m-2">
-                                    <label for="day" class="col-form-label text-unactive">Jours</label>
-                                    <select class="loadSelect2" name="states[]" multiple="multiple" style="width:100%">
-                                        <option value="all">Tous les jours</option>
-                                        <option value="Lundi">Lundi</option>
-                                        <option value="Mardi">Mardi</option>
-                                        <option value="Mercredi">Mercredi</option>
-                                        <option value="Jeudi">Jeudi</option>
-                                        <option value="Vendredi">Vendredi</option>
-                                        <option value="Samedi">Samedi</option>
-                                        <option value="Dimanche">Dimanche</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="row">
-                            <div class="col-md-6 col-sm-12">
-                                <div class="form-group d-flex flex-column m-2">
-                                    <label for="day" class="col-form-label text-unactive">Horaire début</label>
-                                    <input type="time">
-                                </div>
-                                
-                            </div>
-    
-                            <div class="col-md-6 col-sm-12">
-                                <div class="form-group d-flex flex-column m-2">
-                                    <label for="day" class="col-form-label text-unactive">Horaire fin</label>
-                                    <input type="time">
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="row justify-content-end align-items-center mt-3">
-                            <button class="tamerBtn closeModal">Ajouter</button>
-                        </div>
-
-
-                        </div>
-                    `)
-                    modalCardBody.appendChild(modalContent)
-                    $('.loadSelect2').select2();
-                    
-                break;
-
-                case 'add-Event':
-                    modalContent = stringToHtml(`
-                        <div>
-                            <h6>Ajouter un Évènement</h6>
-                            <hr>
-        
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="form-group d-flex flex-column m-2">
-                                        <label for="day" class="col-form-label text-unactive">Playlists</label>
-                                        <select class="loadSelect2" name="states[]" multiple="multiple" style="width:100%">
-                                            <option value="all">Playlist 1</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="form-group d-flex flex-column m-2">
-                                        <label for="day" class="col-form-label text-unactive">Jour</label>
-                                        <input type="date">
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12">
-                                    <div class="form-group d-flex flex-column m-2">
-                                        <label for="day" class="col-form-label text-unactive">Horaire début</label>
-                                        <input type="time">
+                                        
+                                        
                                     </div>
                                     
                                 </div>
-        
-                                <div class="col-md-6 col-sm-12">
-                                    <div class="form-group d-flex flex-column m-2">
-                                        <label for="day" class="col-form-label text-unactive">Horaire fin</label>
-                                        <input type="time">
-                                    </div>
-                                </div>
                             </div>
         
-                            
-                        </div>
-                    `)
-                    modalCardBody.appendChild(modalContent)
-                    $('.loadSelect2').select2();
-                    
-                break;
-                case 'add-Screen':
-                    modalContent = stringToHtml(`
-                        <div>
-                            <h6>Ajouter un Écran</h6>
-                            <hr>
+                        </a>
+
+                        <a href="#" class="col-lg-3 col-md-6 col-12 streamable">
+                            <div class="thumbnail mini">
+                                <img src="../assets/media/img/placeholder/temp_vod2.jpg">
+                                <div class="video-length badge">01:25</div>
+                                <div class="video-hover">
+                                    <span class="material-icons">add</span>
+                                </div>
+                            </div>
                             <div class="row">
-
-                                <a href="#" dt-modal-size="w-50" class="col-lg-3 col-md-4 col-sm-6 openModal text-black">
-                                    <div class="card screen">
-                                        <div class="card-body">
-                                            <span class="check material-icons mt-2 mb-2">check_circle</span>
-                                            <span class="material-icons-outlined mt-2 mb-2">desktop_windows</span>
-                                            <span>Tous</span>
-                                        </div>
-                            
-                                    </div>
-                                </a>
-
-                                <a href="#" dt-modal-size="w-50" class="col-lg-3 col-md-4 col-sm-6 openModal text-black">
-                                    <div class="card screen active">
-                                        <div class="card-body">
-                                            <span class="check material-icons mt-2 mb-2">check_circle</span>
-                                            <span class="material-icons-outlined mt-2 mb-2">desktop_windows</span>
-                                            <span>TV001</span>
-                                        </div>
-                            
-                                    </div>
-                                </a>
-
-                                <a href="#" dt-modal-size="w-50" class="col-lg-3 col-md-4 col-sm-6 openModal text-black">
-                                    <div class="card screen active">
-                                        <div class="card-body">
-                                            <span class="check material-icons mt-2 mb-2">check_circle</span>
-                                            <span class="material-icons-outlined mt-2 mb-2">desktop_windows</span>
-                                            <span>TV002</span>
-                                        </div>
-                            
-                                    </div>
-                                </a>
-
-                                <a href="#" dt-modal-size="w-50" class="col-lg-3 col-md-4 col-sm-6 openModal text-black">
-                                    <div class="card screen">
-                                        <div class="card-body">
-                                            <span class="check material-icons mt-2 mb-2">check_circle</span>
-                                            <span class="material-icons-outlined text-unactive mt-2 mb-2">desktop_windows</span>
-                                            <span>TV003</span>
-                                        </div>
-                            
-                                    </div>
-                                </a>
-
+                                <div class="col-2 d-flex justify-content-center align-items-center">
+                                    <img height="32px" class="m-2 author-pic rounded-circle" src="../assets/media/img/placeholder/nixia.png">
                                 </div>
-                            <div class="row justify-content-end align-items-center mt-3">
-                                <button class="tamerBtn closeModal">Ajouter</button>
+                                <div class="col-10">
+                                    <div class="d-flex flex-column m-2 thumbnail-infos">
+                                        <span class="name">Streamable1</span>
+                                        <div class="author me-2">
+                                            <span class="material-icons-outlined me-1">person</span>
+                                            <span>Nixia</span>
+                                        </div>
+        
+                                        <div class="row">
+                                            <div class="views col-6">
+                                                <span class="material-icons-outlined me-1">visibility</span>
+                                                <span>153 vues</span>
+                                            </div>
+                                            <div class="date col-6">
+                                                <span class="material-icons-outlined me-1">calendar_today</span>
+                                                <span>8 mois</span>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+        
+                        </a>
+
+                        <a href="#" class="col-lg-3 col-md-6 col-12 streamable">
+                            <div class="thumbnail mini">
+                                <img src="../assets/media/img/placeholder/temp_vod2.jpg">
+                                <div class="video-length badge">01:25</div>
+                                <div class="video-hover">
+                                    <span class="material-icons">add</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2 d-flex justify-content-center align-items-center">
+                                    <img height="32px" class="m-2 author-pic rounded-circle" src="../assets/media/img/placeholder/nixia.png">
+                                </div>
+                                <div class="col-10">
+                                    <div class="d-flex flex-column m-2 thumbnail-infos">
+                                        <span class="name">Streamable1</span>
+                                        <div class="author me-2">
+                                            <span class="material-icons-outlined me-1">person</span>
+                                            <span>Nixia</span>
+                                        </div>
+        
+                                        <div class="row">
+                                            <div class="views col-6">
+                                                <span class="material-icons-outlined me-1">visibility</span>
+                                                <span>153 vues</span>
+                                            </div>
+                                            <div class="date col-6">
+                                                <span class="material-icons-outlined me-1">calendar_today</span>
+                                                <span>8 mois</span>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+        
+                        </a>
+
+                        <a href="#" class="col-lg-3 col-md-6 col-12 streamable">
+                            <div class="thumbnail mini">
+                                <img src="../assets/media/img/placeholder/temp_vod2.jpg">
+                                <div class="video-length badge">01:25</div>
+                                <div class="video-hover">
+                                    <span class="material-icons">add</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2 d-flex justify-content-center align-items-center">
+                                    <img height="32px" class="m-2 author-pic rounded-circle" src="../assets/media/img/placeholder/nixia.png">
+                                </div>
+                                <div class="col-10">
+                                    <div class="d-flex flex-column m-2 thumbnail-infos">
+                                        <span class="name">Streamable1</span>
+                                        <div class="author me-2">
+                                            <span class="material-icons-outlined me-1">person</span>
+                                            <span>Nixia</span>
+                                        </div>
+        
+                                        <div class="row">
+                                            <div class="views col-6">
+                                                <span class="material-icons-outlined me-1">visibility</span>
+                                                <span>153 vues</span>
+                                            </div>
+                                            <div class="date col-6">
+                                                <span class="material-icons-outlined me-1">calendar_today</span>
+                                                <span>8 mois</span>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+        
+                        </a>
+
+                        <a href="#" class="col-lg-3 col-md-6 col-12 streamable">
+                            <div class="thumbnail mini">
+                                <img src="../assets/media/img/placeholder/temp_vod2.jpg">
+                                <div class="video-length badge">01:25</div>
+                                <div class="video-hover">
+                                    <span class="material-icons">add</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2 d-flex justify-content-center align-items-center">
+                                    <img height="32px" class="m-2 author-pic rounded-circle" src="../assets/media/img/placeholder/nixia.png">
+                                </div>
+                                <div class="col-10">
+                                    <div class="d-flex flex-column m-2 thumbnail-infos">
+                                        <span class="name">Streamable1</span>
+                                        <div class="author me-2">
+                                            <span class="material-icons-outlined me-1">person</span>
+                                            <span>Nixia</span>
+                                        </div>
+        
+                                        <div class="row">
+                                            <div class="views col-6">
+                                                <span class="material-icons-outlined me-1">visibility</span>
+                                                <span>153 vues</span>
+                                            </div>
+                                            <div class="date col-6">
+                                                <span class="material-icons-outlined me-1">calendar_today</span>
+                                                <span>8 mois</span>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+        
+                        </a>
+
+                        <a href="#" class="col-lg-3 col-md-6 col-12 streamable">
+                            <div class="thumbnail mini">
+                                <img src="../assets/media/img/placeholder/temp_vod2.jpg">
+                                <div class="video-length badge">01:25</div>
+                                <div class="video-hover">
+                                    <span class="material-icons">add</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2 d-flex justify-content-center align-items-center">
+                                    <img height="32px" class="m-2 author-pic rounded-circle" src="../assets/media/img/placeholder/nixia.png">
+                                </div>
+                                <div class="col-10">
+                                    <div class="d-flex flex-column m-2 thumbnail-infos">
+                                        <span class="name">Streamable1</span>
+                                        <div class="author me-2">
+                                            <span class="material-icons-outlined me-1">person</span>
+                                            <span>Nixia</span>
+                                        </div>
+        
+                                        <div class="row">
+                                            <div class="views col-6">
+                                                <span class="material-icons-outlined me-1">visibility</span>
+                                                <span>153 vues</span>
+                                            </div>
+                                            <div class="date col-6">
+                                                <span class="material-icons-outlined me-1">calendar_today</span>
+                                                <span>8 mois</span>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+        
+                        </a>
+                       
+                    </div></div>
+    
+                    `)
+                    modal.querySelector('.modal-header .modal-title').innerText = 'Ajouter un streamable'
+                    modal.querySelector('.modal-footer').appendChild(stringToHtml(`
+                        <div class="d-flex flex-row justify-content-between align-items-center w-100">
+                            <span class="text-secondary"><span class="selected_num">0</span> élement(s) selectionné(s)</span>
+                            <button class="tamerBtn">Ajouter</button>
+                        </div>
+                    `))
+                    modalBody.appendChild(modalContent)
+                    let stmb_selected_num = 0
+
+                    modalBody.querySelectorAll('.streamable').forEach((el)=>{
+                        el.addEventListener('click', ()=>{
+                            el.classList.toggle('selected')
+                            stmb_selected_num = (el.classList.contains('selected')) ?  ++stmb_selected_num : --stmb_selected_num
+                            modal.querySelector('.selected_num').innerText  = stmb_selected_num
+                        })
+                    })
+                break;
+                case 'add-prog':
+                    modalContent = stringToHtml(`
+                    <div class="row" style="align-items: center;">
+                        <div class="col-lg-6 col-12">
+                            <div class="form-group m-2">
+                                <label for="pl-name" class="col-form-label">Nom de la programmation</label>
+                                <input type="text" class="form-control" id="prog-name" value="">
                             </div>
                         </div>
+                        <div class="row justify-content-end">
+                            <button class="tamerBtn">Créer</button>
+                        </div>
+                    </div>
                     `)
-                    modalCardBody.appendChild(modalContent)
+                    modal.querySelector('.modal-header .modal-title').innerText = 'Ajouter une programmation'
+                    modalBody.appendChild(modalContent)
                 break;
+
             }
 
             
-            let closeModal = document.querySelectorAll('.closeModal')
+            $(modal).modal('show')
 
-            closeModal.forEach((el)=>{
-                el.addEventListener('click', ()=>{
-                    modalContainer.classList.remove('active')
-                    modalCard.classList.remove(modalSize)
-                    removeAllChildNodes(modalCardBody)
+            closeBtns.forEach((btn)=>{
+                btn.addEventListener('click', ()=>{
+                    removeAllChildNodes(modalBody)
+                    removeAllChildNodes(modalFooter)
+                    $(modal).modal('hide')
                 })
             })
 

@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 header {
   width: 100%;
   height: 90px;
-  z-index: 1000;
+  z-index: 2;
   position: fixed;
   top: 0;
   left: 0;
@@ -535,6 +535,7 @@ main {
 .PlWrapper .card.main {
   background-color: white;
   border-color: transparent;
+  height: 100%;
 }
 
 .PlWrapper .card.main .card-body {
@@ -738,14 +739,15 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 0.5em;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .vod .title {
@@ -945,7 +947,7 @@ main {
 
 .thumbnail {
   width: auto;
-  height: 100%;
+  max-height: 200px;
   position: relative;
   cursor: pointer;
   -webkit-transition: 0.3s;
@@ -953,12 +955,21 @@ main {
   overflow: hidden;
 }
 
+.thumbnail.huge {
+  max-height: 100%;
+}
+
 .thumbnail.mini {
   border-radius: 0.25rem;
-  height: auto;
+  height: 130px;
   -webkit-box-shadow: 0 1px 3px RGBA(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 0 1px 3px RGBA(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   margin: 0.25em;
+}
+
+.thumbnail.mini img {
+  width: 100%;
+  max-height: 200px;
 }
 
 .thumbnail .video-hover {
@@ -1134,35 +1145,43 @@ sup {
 
 .login-card {
   border-color: transparent;
+  z-index: 300;
+  background-color: transparent;
 }
 
 .loginInput {
-  border: 1px dashed #e9e9e9;
+  border: 1px solid white;
   border-radius: 0.5rem;
-  background-color: #f9f9f9;
+  background-color: transparent;
   color: #848484;
   outline: none;
-  height: 40px;
+  height: 50px;
+  width: 500px;
 }
 
 .loginInput::-webkit-input-placeholder {
-  color: #848484;
+  color: white;
 }
 
 .loginInput:-ms-input-placeholder {
-  color: #848484;
+  color: white;
 }
 
 .loginInput::-ms-input-placeholder {
-  color: #848484;
+  color: white;
 }
 
 .loginInput::placeholder {
-  color: #848484;
+  color: white;
 }
 
 .bg-unpeusombre {
   background-color: #f5f5f5;
+}
+
+.bg-main {
+  background-color: #3DB13D;
+  color: white;
 }
 
 .text-main {
@@ -1300,10 +1319,6 @@ hr {
   margin-top: 1.5rem;
 }
 
-.animate__animated {
-  --animate-duration: 0.3s;
-}
-
 .pl-el {
   width: 200px;
   height: 200px;
@@ -1371,5 +1386,119 @@ hr {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.daccord {
+  padding: 0.5em;
+}
+
+.daccord .card {
+  border: 2px dashed #d5d5d5;
+  height: 100%;
+}
+
+.daccord .card .card-body {
+  overflow: scroll;
+}
+
+.card.license {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 30px;
+  border: 2px dashed #d5d5d5;
+}
+
+.card.device {
+  border: 2px solid #e8e8e8;
+}
+
+.card.device .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.card.device .card-body span {
+  font-size: 96px;
+  color: #d9d9d9;
+}
+
+.card.device .card-footer {
+  border: none;
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card.device .card-footer .name {
+  text-align: center;
+  font-weight: 600;
+}
+
+.card.device .card-footer .infos {
+  color: #d0d0d0;
+  font-weight: light;
+}
+
+.tgcard {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.modal-backdrop {
+  z-index: 5;
+}
+
+.streamable {
+  padding: 0.5rem;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+}
+
+.streamable.selected {
+  border-color: #3DB13D;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.logo {
+  position: fixed;
+  top: 15%;
+  left: 23%;
+  color: #f1f1f1;
+  width: 50%;
+  height: 30%;
+  padding: 20px;
+  z-index: 300;
+}
+
+.mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.5);
 }
 /*# sourceMappingURL=main.css.map */

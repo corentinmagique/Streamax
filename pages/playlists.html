@@ -103,7 +103,7 @@
                     <li>
                         <a href="../index.html">
                             <span class="material-icons-outlined">movie</span>
-                            Catalogue
+                            Bibliothèque
                         </a>
                     </li>
 
@@ -145,236 +145,133 @@
             </div> -->
 
             <div class="row h-100">
-                <div class="col-lg-3 col-md-12">
-                    
-                    <div class="myPlsWrapper">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="d-flex flex-row align-items-center justify-content-between">
-                                    <div class="d-flex flex-column">
-                                        <h6>Mes Playlists</h6>
-                                        <span class="creator text-muted">3 Playlist(s)</span>
-                                    </div>
-                                    
-                                    <a href="#" class="openModal" dt-modal-size="w-50" id="add-Pl"><span class="material-icons text-main ms-auto">add</span></a>
-                                </div>
-                            </div>
-                            <div class="card-body"> 
-                                 <div class="vodWrapper mt-3">
-
-                                    <div class="vod current">
-                                        <img class="rounded" height="48px" width="48px" src="../assets/media/img/placeholder/temp_banner.jpg">
-                                        <span class="title">Playlist 1</span>
-                                    </div>
-
-                                    <div class="vod">
-                                        <img class="rounded" height="48px" width="48px" src="../assets/media/img/placeholder/temp_banner.jpg">
-                                        <span class="title">Playlist 2</span>
-                                    
-                                    </div>
-
-                                    <div class="vod">
-                                        <img class="rounded" height="48px" width="48px" src="../assets/media/img/placeholder/temp_banner.jpg">
-                                        <span class="title">Playlist 3</span>
-                                    </div>                            
-                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-12">
+                
+                <div class="col-12">
                     <div class="PlWrapper">
                         <div class="card main">
                             <div class="d-flex widget-title-wrapper flex-row m-3 mt-5 justify-content-between align-items-center">
-                                <h5 class="text-uppercase widget-title">Playlist 1</h5>
-                                <a href="#" class="openModal text-unactive" dt-modal-size="w-25" id="rem-Pl"><span class="material-icons-outlined">delete</span></a>
+                                <h5 class="text-uppercase widget-title">Mes Playlists</h5>
+                                <a href="#" class="openModal" id="add-Pl"><span class="material-icons text-main ms-auto">add</span></a>
                             </div>
 
-                            
-
                             <div class="card-body">
+                                <div class="row">
 
-                                <!-- <hr> -->
-                                
-                                <div class="banner mb-5">
-                                    <div class="mask"></div>
-                                    <img class="rounded" src="../assets/media/img/placeholder/temp_banner.jpg">
-                                    <a href="#" class="overlay-content playBtn text-white">
-                                        <span class="material-icons">
-                                            play_arrow
-                                        </span>
-                                    </a>
-                                </div>
-                      
-                                <div class="card streamable-desc m-2">
-                                    <div class="card-header">
-                                        <h4 class="title">Playlist 1</h4>
-                                        <div class="d-flex flex-row mt-2 mb-1">
-                                            <div class="meta d-flex flex-row align-items-center me-2">
-                                                <span class="material-icons-outlined me-1">calendar_today</span>
-                                                <span>Il y a 8 mois</span>
-                                            </div>
-                    
-                                            <div class="meta d-flex flex-row align-items-center me-2">
-                                                <span class="material-icons-outlined me-1">visibility</span>
-                                                <span>0 vues</span>
-                                            </div>
-                                    
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <span>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Nunc eget magna eget mi mattis varius. Etiam et sapien ut turpis varius lacinia at ac urna. 
-                                            Quisque tristique lorem orci, id rutrum nibh viverra sollicitudin.
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex widget-title-wrapper flex-row m-3 mt-5 justify-content-between align-items-center">
-                                    <h5 class="text-uppercase widget-title">Streamables</h5>
-                                    <a href="#" id="add-Stbl" dt-modal-size="w-75" class="openModal"><img height="18px" src="../assets/media/img/add.png"></a>
-                                </div>
-
-                                <div id="grid" class="row justify-content-center">
-                                    <div id="gridDemo" class="col">
-
-                                        <div class="pl-el thumbnail mini">
-                                            <img src="../assets/media/img/placeholder/temp_vod1.jpg">
-                                            <!-- <div class="video-length badge">01:25</div> -->
-                                            <div class="video-hover">
-                                                <span class="material-icons" style="font-size: 24px;">pan_tool</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="pl-el thumbnail mini">
-                                            <img src="../assets/media/img/placeholder/temp_vod2.jpg">
-                                            <div class="video-hover">
-                                                <span class="material-icons" style="font-size: 24px;">pan_tool</span>
-                                            </div>
-                                            <!-- <div class="video-length badge">01:25</div> -->
-                                            <!-- <div class="video-hover">
-                                                <span class="material-icons">play_arrow</span>
-                                            </div> -->
-                                        </div>
-
-                                        <div class="pl-el thumbnail mini">
+                                    <a href="./playlist.html" class="col-lg-3 col-md-6 col-12">
+                                        <div class="thumbnail mini">
                                             <img src="../assets/media/img/placeholder/temp_vod3.jpg">
+                                            <div class="video-length badge">5 vidéos</div>
                                             <div class="video-hover">
-                                                <span class="material-icons" style="font-size: 24px;">pan_tool</span>
+                                                <span class="material-icons">edit</span>
                                             </div>
-                                            <!-- <div class="video-length badge">01:25</div> -->
-                                            <!-- <div class="video-hover">
-                                                <span class="material-icons">play_arrow</span>
-                                            </div> -->
                                         </div>
-
-                                        <div class="pl-el thumbnail mini">
-                                            <img src="../assets/media/img/placeholder/temp_vod4.jpg">
-                                            <div class="video-hover">
-                                                <span class="material-icons" style="font-size: 24px;">pan_tool</span>
+                                        <div class="row">
+                                            <div class="col-2 d-flex justify-content-center align-items-center">
+                                                <img height="32px" class="m-2 author-pic rounded-circle" src="../assets/media/img/placeholder/nixia.png">
                                             </div>
-                                            <!-- <div class="video-hover">
-                                                <span class="material-icons">play_arrow</span>
-                                            </div> -->
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                <!-- <div class="similar">
-                                    <h6 class="fw-bold mb-2">Streamables</h6>
-                                    <div class="row similarWrapper align-items-center">
-
-                                        <a href="#" id="add-Stbl" dt-modal-size="w-75" class="addWrapper col-lg-3 col-md-4 col-sm-6 openModal text-black">
-                                            <div class="card w-50 add">
-                                                <div class="card-body">
-                                                    <img src="../assets/media/img/add.png">
-                                        
-                                                </div>
-                                                
-                                            </div>
-                                        </a>
-    
-                                        <a href="./streamable.html" class="col-lg-3 col-md-4 col-sm-6 text-black">
-                                            <div class="card screen">
-                                                <div class="card-body">
-                                                    <span class="material-icons-outlined text-unactive mt-2 mb-2">image</span>
-                                                    <span>Streamable 1</span>
-                                                </div>
-                                    
-                                            </div>
-                                        </a>
-    
-                                        <a href="./streamable.html" class="col-lg-3 col-md-4 col-sm-6 text-black">
-                                            <div class="card screen">
-                                                <div class="card-body">
-                                                    <span class="material-icons-outlined text-unactive mt-2 mb-2">image</span>
-                                                    <span>Streamable 2</span>
-                                                </div>
-                                    
-                                            </div>
-                                        </a>
-
-                                    </div>
-                                </div> -->
-
-                                <!-- <div class="row plViewer">
-                                    <div class="col-md-12 col-lg-6">
-
-                                        <div class="banner">
-                                            
-                                            <img class="rounded fake-taxi" src="../assets/media/img/placeholder/temp_banner.jpg">
-                                            <a href="#" class="overlay-content playBtn text-white">
-                                                <span class="material-icons">
-                                                    play_arrow
-                                                </span>
-                                            </a>
-                                        </div>
+                                            <div class="col-10">
+                                                <div class="d-flex flex-column m-2 thumbnail-infos">
+                                                    <span class="name">Playlist1</span>
+                                                    <div class="author me-2">
+                                                        <span class="material-icons-outlined me-1">person</span>
+                                                        <span>Nixia</span>
+                                                    </div>
                     
-                                    </div>
-                                    <div class="col-md-12 col-lg-6">
-                                        <div class="card PlList ms-lg-2 mt-lg-0 mt-md-2 mt-sm-2 mt-2">
-                                            <div class="card-header">
-                                                <div class="d-flex flex-row align-items-center justify-content-between w-100">
-                                                    
-                                                    <div class="d-flex flex-column">
-                                                        
-                                                        <span class="creator text-muted">5 Vidéo(s)</span>
+                                                    <div class="row">
+                                                        <div class="views col-6">
+                                                            <span class="material-icons-outlined me-1">visibility</span>
+                                                            <span>153 vues</span>
+                                                        </div>
+                                                        <div class="date col-6">
+                                                            <span class="material-icons-outlined me-1">calendar_today</span>
+                                                            <span>8 mois</span>
+                                                        </div>
                                                     </div>
                                                     
-                                                    <a href="#"><span class="material-icons text-main ms-auto">add</span></a>
+                                                    
                                                 </div>
-                                            </div>
-                                            <div class="card-body">
-                                                <div class="vod current">
-                                                    <img class="rounded" height="48px" width="48px" src="../assets/media/img/placeholder/temp_banner.jpg">
-                                                    <span class="title">Vidéo 1</span>
-                                                </div>
-                                                <div class="vod">
-                                                    <img class="rounded" height="48px" width="48px" src="../assets/media/img/placeholder/temp_banner.jpg">
-                                                    <span class="title">Vidéo 2</span>
                                                 
-                                                </div>
-                                                <div class="vod">
-                                                    <img class="rounded" height="48px" width="48px" src="../assets/media/img/placeholder/temp_banner.jpg">
-                                                    <span class="title">Vidéo 3</span>
-                                                
-                                                </div>
-                                                <div class="vod">
-                                                    <img class="rounded" height="48px" width="48px" src="../assets/media/img/placeholder/temp_banner.jpg">
-                                                    <span class="title">Vidéo 4</span>
-                                                
-                                                </div>
-                                                <div class="vod">
-                                                    <img class="rounded" height="48px" width="48px" src="../assets/media/img/placeholder/temp_banner.jpg">
-                                                    <span class="title">Vidéo 5</span>
-                                                
-                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div> -->
+                                    </a>
 
+                                    <a href="./playlist.html" class="col-lg-3 col-md-6 col-12">
+                                        <div class="thumbnail mini">
+                                            <img src="../assets/media/img/placeholder/temp_vod1.jpg">
+                                            <div class="video-length badge">78 vidéos</div>
+                                            <div class="video-hover">
+                                                <span class="material-icons">edit</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2 d-flex justify-content-center align-items-center">
+                                                <img height="32px" class="m-2 author-pic rounded-circle" src="../assets/media/img/placeholder/nixia.png">
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="d-flex flex-column m-2 thumbnail-infos">
+                                                    <span class="name">Playlist1</span>
+                                                    <div class="author me-2">
+                                                        <span class="material-icons-outlined me-1">person</span>
+                                                        <span>Nixia</span>
+                                                    </div>
+                    
+                                                    <div class="row">
+                                                        <div class="views col-6">
+                                                            <span class="material-icons-outlined me-1">visibility</span>
+                                                            <span>153 vues</span>
+                                                        </div>
+                                                        <div class="date col-6">
+                                                            <span class="material-icons-outlined me-1">calendar_today</span>
+                                                            <span>8 mois</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a href="./playlist.html" class="col-lg-3 col-md-6 col-12">
+                                        <div class="thumbnail mini">
+                                            <img src="../assets/media/img/placeholder/temp_vod2.jpg">
+                                            <div class="video-length badge">4 vidéos</div>
+                                            <div class="video-hover">
+                                                <span class="material-icons">edit</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2 d-flex justify-content-center align-items-center">
+                                                <img height="32px" class="m-2 author-pic rounded-circle" src="../assets/media/img/placeholder/nixia.png">
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="d-flex flex-column m-2 thumbnail-infos">
+                                                    <span class="name">Playlist1</span>
+                                                    <div class="author me-2">
+                                                        <span class="material-icons-outlined me-1">person</span>
+                                                        <span>Nixia</span>
+                                                    </div>
+                    
+                                                    <div class="row">
+                                                        <div class="views col-6">
+                                                            <span class="material-icons-outlined me-1">visibility</span>
+                                                            <span>153 vues</span>
+                                                        </div>
+                                                        <div class="date col-6">
+                                                            <span class="material-icons-outlined me-1">calendar_today</span>
+                                                            <span>8 mois</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
                             </div>
                         </div>
                     </div>
