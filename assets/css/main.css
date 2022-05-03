@@ -687,53 +687,6 @@ main {
   font-size: 14px;
 }
 
-.screen {
-  border: 2px dashed #d8d8d8;
-  background-color: #f8f8f8;
-  margin: 0.25rem;
-}
-
-.screen .check {
-  font-size: 16px;
-  position: absolute;
-  top: 0;
-  right: 8px;
-  display: none;
-}
-
-.screen.active {
-  border: 1px solid #3DB13D;
-  color: #3DB13D;
-}
-
-.screen.active .check {
-  display: inline;
-}
-
-.screen.active .card-body {
-  color: #3DB13D;
-}
-
-.screen .card-body {
-  text-align: center;
-  color: #848484;
-  font-weight: 500;
-  font-size: 13px;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.screen .card-body img {
-  height: 48px;
-  margin-bottom: 1.5rem;
-}
-
 .vod {
   position: relative;
   display: -webkit-box;
@@ -961,7 +914,7 @@ main {
 
 .thumbnail.mini {
   border-radius: 0.25rem;
-  height: 130px;
+  max-height: 130px;
   -webkit-box-shadow: 0 1px 3px RGBA(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 0 1px 3px RGBA(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   margin: 0.25em;
@@ -969,7 +922,7 @@ main {
 
 .thumbnail.mini img {
   width: 100%;
-  max-height: 200px;
+  max-height: 130px;
 }
 
 .thumbnail .video-hover {
@@ -1030,7 +983,7 @@ main {
   height: auto;
   -webkit-transition: .3s;
   transition: .3s;
-  z-index: 51;
+  z-index: 1;
 }
 
 .thumbnail .bottom {
@@ -1474,14 +1427,59 @@ hr {
   z-index: 5;
 }
 
-.streamable {
+.streamable, .screen {
   padding: 0.5rem;
   border: 2px solid white;
   border-radius: 0.5rem;
 }
 
-.streamable.selected {
+.streamable.selected, .screen.selected {
   border-color: #3DB13D;
+}
+
+.streamable .device, .screen .device {
+  border: 2px solid #e8e8e8;
+}
+
+.streamable .device .card-body, .screen .device .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.streamable .device .card-body span, .screen .device .card-body span {
+  font-size: 96px;
+  color: #d9d9d9;
+}
+
+.streamable .device .card-footer, .screen .device .card-footer {
+  border: none;
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.streamable .device .card-footer .name, .screen .device .card-footer .name {
+  text-align: center;
+  font-weight: 600;
+  color: #555;
+}
+
+.streamable .device .card-footer .infos, .screen .device .card-footer .infos {
+  color: #d0d0d0;
+  font-weight: light;
 }
 
 #myVideo {
@@ -1508,5 +1506,155 @@ hr {
   left: 0;
   z-index: 200;
   background: rgba(0, 0, 0, 0.5);
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.switch .slider::before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.switch .slider.round {
+  border-radius: 17px;
+}
+
+.switch .slider.round::before {
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #3DB13D;
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #ccc;
+          box-shadow: 0 0 1px #ccc;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+.input-label {
+  font-weight: 600;
+}
+
+.input-label-slurp {
+  font-weight: light;
+  font-style: italic;
+}
+
+input[type="time"] {
+  background: #f5f5f5;
+  border: transparent;
+  border-radius: 0.25rem;
+  padding: 5px;
+  color: #555;
+  outline: none;
+}
+
+.prog-indicator {
+  color: #c9c9c9;
+  font-style: italic;
+  font-size: 13px;
+}
+
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple {
+  background: #F5F5F5 !important;
+  border: none !important;
+  border-radius: 0.25rem;
+  font-size: 0.8333em;
+}
+
+.select2-container--default .select2-selection--single[aria-expanded="true"] {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.select2-container--default .select2-results__option--selected {
+  background-color: transparent;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  border: none;
+}
+
+.select2-search--dropdown .select2-search__field {
+  padding: 6px;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field:focus-visible {
+  border: 1px solid #ddd;
+  font-size: 0.8333em;
+}
+
+.select2-container--open .select2-dropdown--below,
+.select2-container--open .select2-dropdown--above {
+  border: none;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background: #F5F8FA;
+  border-radius: 0px;
+  font-size: 0.8333em;
+}
+
+.select2-results {
+  margin-top: 1em;
+  font-size: 0.8333em;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: #ddd;
+  color: black;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  background-color: #3DB13D75 !important;
+  border-color: #3DB13D !important;
+  color: #555;
+  font-weight: bold;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  color: #555 !important;
+  border-color: #3DB13D !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
+  background-color: #3DB13D !important;
 }
 /*# sourceMappingURL=main.css.map */

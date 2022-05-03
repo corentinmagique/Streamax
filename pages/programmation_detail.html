@@ -24,6 +24,7 @@
         <link href="../assets/css/lib/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
         <link href='../assets/css/lib/Planning.css' rel='stylesheet' />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
         <!-- MAIN CSS -->
         <link href="../assets/css/lib/sweetalert2.min.css" rel="stylesheet" type="text/css">
         <link href="../assets/css/main.css" rel="stylesheet" type="text/css">
@@ -35,7 +36,7 @@
 
         <header class="d-flex flex-row justify-content-between justify-content-sm-between justify-content-md-end justify-content-lg-end align-items-center">
             <a class="mobileLogo ms-3" href="../index.html">
-                <span class="fw-bold text-black text-center">S T R E A <span class="fw-bolder" style="color:#42b740;">M A X</span></span>
+                <img src="../assets/media/img/logo streamax black.png" height="30px" width="100px">
             </a>
             <!-- <div class="searchbarWrapper flex-row align-items-center ms-lg-5 ms-md-3">
                 <span class="material-icons-outlined">search</span>
@@ -97,7 +98,7 @@
         <div id="sidebar">
             <nav class="w-100 d-flex flex-column align-items-center">
                 <a href="../index.html">
-                    <span class="fw-bold text-black text-center">S T R E A <span class="fw-bolder" style="color:#42b740;">M A X</span></span>
+                    <img src="../assets/media/img/logo streamax black.png" height="30px" width="100px">
                 </a>
                 <ul>  
 
@@ -151,6 +152,131 @@
                     </div>
                     <div class="card-body">
 
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 col-12 d-flex flex-row justify-content-between align-items-center">
+                                <span class="input-label">Programmation récurrente : </span>
+                                <label class="switch ms-2">
+                                    <input id="advmode-input" type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-lg-4 col-md-12 col-12 d-flex flex-row justify-content-between align-items-center">
+                                <span class="input-label-slurp">Heure de début : </span>
+                                <input type="time" class="ms-2" value="00:00">
+                            </div>
+                        </div>
+
+                        <div class="row mt-1 mb-3">
+                            <div class="col-lg-4 col-md-12 col-12 d-flex flex-row justify-content-between align-items-center">
+                                <span class="input-label-slurp">Heure de fin : </span>
+                                <input type="time" class="ms-2" value="23:59">
+                            </div>
+                        </div>
+
+                        <div class="row mt-1 mb-3">
+                            <div class="col-lg-4 col-md-12 col-12 d-flex flex-column justify-content-start align-items-start">
+                                <span class="input-label-slurp">Jours : </span>
+                                <select class="days mt-2" name="states[]" multiple="multiple" style="width: 100%;">
+                                    <option value="Lundi">Lundi</option>
+                                    <option value="Mardi">Mardi</option>
+                                    <option value="Mercredi">Mercredi</option>
+                                    <option value="Jeudi">Jeudi</option>
+                                    <option value="Vendredi">Vendredi</option>
+                                    <option value="Samedi">Samedi</option>
+                                    <option value="Dimanche">Dimanche</option>
+                                  </select>
+                            </div>
+                        </div>
+
+                        <span class="prog-indicator">Cette programmation prend effet de 00h00 à 23h59, le Lundi - Mardi - Dimanche</span>
+
+                        <div class="d-flex widget-title-wrapper flex-row m-3 justify-content-between align-items-center">
+                            <h5 class="text-uppercase widget-title">Playlists</h5>
+                            <a href="#" class="openModal" id="prog-addPl"><span class="material-icons-outlined text-main ms-auto">edit</span></a>
+                        </div>
+
+                        <div class="row">
+
+                            <a href="./playlist.html" class="col-lg-3 col-md-6 col-12">
+                                <div class="thumbnail mini">
+                                    <img src="../assets/media/img/placeholder/temp_vod3.jpg">
+                                    <div class="video-length badge">5 vidéos</div>
+                                    <div class="video-hover">
+                                        <span class="material-icons">edit</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 d-flex justify-content-center align-items-center">
+                                        <img height="32px" class="m-2 author-pic rounded-circle" src="../assets/media/img/placeholder/nixia.png">
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="d-flex flex-column m-2 thumbnail-infos">
+                                            <span class="name">Playlist1</span>
+                                            <div class="author me-2">
+                                                <span class="material-icons-outlined me-1">person</span>
+                                                <span>Nixia</span>
+                                            </div>
+            
+                                            <div class="row">
+                                                <div class="views col-6">
+                                                    <span class="material-icons-outlined me-1">visibility</span>
+                                                    <span>153 vues</span>
+                                                </div>
+                                                <div class="date col-6">
+                                                    <span class="material-icons-outlined me-1">calendar_today</span>
+                                                    <span>8 mois</span>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+
+                        <div class="d-flex widget-title-wrapper flex-row m-3 justify-content-between align-items-center">
+                            <h5 class="text-uppercase widget-title">écrans</h5>
+                            <a href="#" class="openModal" id="prog-addScreen"><span class="material-icons-outlined text-main ms-auto">edit</span></a>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-lg-3 col-md-6 col-12 p-2">
+                                <div class=" card device">
+                                    <div class="card-header">
+                                        <a href="#" class="text-muted ms-auto">
+                                            <span class="material-icons-outlined text-muted  m-2">
+                                                delete
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="card-body">
+                                        
+                                        <span class="material-icons-outlined text-secondary">
+                                            tv
+                                        </span>
+                                        
+                                    </div>
+
+                                    <div class="card-footer">
+                                        
+                                        <span class="name">
+                                            Smart TV de Carine
+                                        </span>
+                                        <span class="infos">
+                                            02b:4789::987
+                                        </span>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -160,6 +286,7 @@
         <script src="../assets/js/lib/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         <!-- <script src='../assets/js/lib/Planning.js'></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         <script src="../assets/js/lib/sweetalert2.all.min.js"></script>
         <script src="../assets/js/lib/sweetalert2.min.js"></script>
         <script src="../assets/js/prog.js"></script>
