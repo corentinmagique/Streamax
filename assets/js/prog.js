@@ -39,6 +39,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         
     })
 
+    $('.days').select2().val(['Lundi', 'Mardi', 'Dimanche']).trigger('change')
+
 
 
     

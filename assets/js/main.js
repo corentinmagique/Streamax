@@ -617,7 +617,4 @@ window.addEventListener("DOMContentLoaded", (event) => {
         })
     })
 
-    $('.days').select2().val(['Lundi', 'Mardi', 'Dimanche']).trigger('change')
-
-    
 })
